@@ -2,5 +2,5 @@
 
 { config, pkgs, ... }:
 {
-	environment.variables.EDITOR = "vim"	
+	environment.variables.EDITOR = "vim";	
 }
