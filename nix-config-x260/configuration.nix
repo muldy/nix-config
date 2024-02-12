@@ -8,7 +8,7 @@
     [ # Include the results of the hardware scan.
       <nixos-hardware/lenovo/thinkpad/x220>
       # Common configuration
-      ../../common-configuration.nix
+      ../common-configuration.nix
       ./hardware-configuration.nix
     ];
 
