@@ -3,13 +3,12 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, ... }:
-
 {
   imports =
     [ # Include the results of the hardware scan.
       <nixos-hardware/lenovo/thinkpad/t440p>
       # Common configuration
-      ../../common-configuration.nix
+      ../common-configuration.nix
       ./hardware-configuration.nix
     ];
  
