@@ -16,7 +16,13 @@
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/44d1c53e-0ab7-4890-a081-578c6d5ef977";
       fsType = "ext4";
+      options = [
+		"noatime"
+		"nodiratime"
+		"discard"
+	];
     };
+  boot.kernel.sysctl = { "vm.swappiness" = 0;};
 
   boot.initrd.luks.devices."luks-66880f91-f14e-4cb7-976c-c9209fcd430c".device = "/dev/disk/by-uuid/66880f91-f14e-4cb7-976c-c9209fcd430c";
 
