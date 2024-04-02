@@ -64,6 +64,9 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    neovim
+    tmux
+    unzip
     htop
     wget
     curl
@@ -73,8 +76,21 @@
     delta
     tailscale
     pkgs.discord
-    firefox
-    thunderbird
+    python3
+    python311Packages.virtualenv
+    dig
+  ];
+  programs.tmux = {
+    enable = true;
+    clock24 = true;
+    extraConfig = '' # used for less common options, intelligently combines if defined in multiple places.
+    '';
+  };
+  fonts.fonts = with pkgs; [
+    font-awesome
+    powerline-fonts
+    powerline-symbols
+    (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
   ];
   # Automatic Garbage Collection
   nix.gc = {
