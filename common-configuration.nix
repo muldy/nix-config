@@ -47,12 +47,10 @@
     description = "Fox Muldy";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      firefox
       barrier
       tilix
       variety
       syncthing
-    #  thunderbird
       k9s
     ];
     shell = pkgs.fish;
@@ -70,7 +68,10 @@
     tree
     fish
     git
+    delta
     tailscale
     pkgs.discord
+    firefox
+    thunderbird
   ];
 }
