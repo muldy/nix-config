@@ -92,6 +92,8 @@
     dig
     firefox
     thunderbird
+    beeper
+    gnomeExtensions.tray-icons-reloaded
   ];
   programs.tmux = {
     enable = true;
