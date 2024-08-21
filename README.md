@@ -6,6 +6,11 @@ sudo nix-channel --add https://github.com/nix-community/home-manager/archive/mas
 sudo nix-channel --update
 ```
 
+# Flakes:
+```
+sudo nix flake init --template github:vimjoyer/flake-starter-config
+$ sudo nixos-rebuild switch --flake /etc/nixos/#default
+```
 
 # Update configuration
 ```
