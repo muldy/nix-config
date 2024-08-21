@@ -1,7 +1,8 @@
 # Add and update nixos-hardware channel:
 
 ```
-sudo nix-channel --add https://github.com/NixOS/nixos-hardware/archive/master.tar.gz nixos-hardware
+sudo nix-channel --add https://github.com/NixOS/nixos-hardware/archive/master.tar.gz nixos-hardware 
+sudo nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
 sudo nix-channel --update
 ```
 

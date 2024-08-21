@@ -9,7 +9,7 @@
     [ # Include the results of the hardware scan.
       <nixos-hardware/lenovo/thinkpad/t14/amd/gen4>
       # Common configuration
-      ../common-configuration.nix
+      ../common-configuration-24.nix
       ./hardware-configuration.nix
     ];
 

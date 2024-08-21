@@ -3,9 +3,11 @@
 { config, pkgs, ... }:
 
 {
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
+  services.auto-cpufreq.enable = true;
   services.pipewire = {
     enable = true;
     alsa.enable = true;
@@ -30,8 +32,6 @@
     description = "Fox Muldy";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      variety
-      syncthing
     ];
     shell = pkgs.zsh;
   };
@@ -45,21 +45,30 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    unzip
-    htop
-    wget
+    auto-cpufreq
     curl
-    tree
-    zsh
-    git
-    tailscale
-    pkgs.discord
-    python3
-    python311Packages.virtualenv
     dig
     firefox
+    git
+    git-doc
+    gnomeExtensions.tray-icons-reloaded
+    htop
+    kitty
+    neovim
+    discord
+    python3
+    python311Packages.virtualenv
+    syncthing
+    tailscale
     thunderbird
+    tree
+    unzip
+    variety
+    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    vscode
+    wget
+    xsel
+    zsh
   ];
   programs.tmux = {
     enable = true;
@@ -67,10 +76,9 @@
     extraConfig = '' # used for less common options, intelligently combines if defined in multiple places.
     '';
   };
-  fonts.fonts = with pkgs; [
-    font-awesome
-    powerline-fonts
-    powerline-symbols
+  fonts.fontconfig.enable = true;
+  fonts.packages = with pkgs; [
+    #(nerdfonts.override { fonts = [ "JetBrainsMono" "FiraCode" "DroidSansMono" ]; })
     (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
   ];
   # Automatic Garbage Collection
