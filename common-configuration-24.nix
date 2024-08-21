@@ -52,7 +52,8 @@
     git
     git-doc
     gnomeExtensions.tray-icons-reloaded
-    htop
+    htop 
+    home-manager
     kitty
     neovim
     discord
