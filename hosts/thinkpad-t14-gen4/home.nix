@@ -1,6 +1,11 @@
 { config, pkgs, ... }:
 
 {
+  imports = 
+  [
+      ../../programs/git.nix
+      ../../programs/neovim.nix
+  ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "muldy";
@@ -36,20 +41,17 @@
     # '')
     #pkgs.nixos.direnv
     #pkgs.terraform
-    #pkgs.discord
+
     pkgs.git
-    pkgs.git-extras
     pkgs.jq
     pkgs.k9s
-    pkgs.kitty
     pkgs.kubectx
     pkgs.kubernetes-helm
     pkgs.kustomize
-    pkgs.openrgb-with-all-plugins
     pkgs.pre-commit
+    pkgs.tree
     pkgs.tree-sitter
     pkgs.yq
-    pkgs.zsh-completions
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -83,10 +85,12 @@
   #
   #  /etc/profiles/per-user/muldy/etc/profile.d/hm-session-vars.sh
   #
-  home.sessionVariables = {
-    EDITOR = "vim";
-  };
+  #home.sessionVariables = {
+  #  EDITOR = "vim";
+  #};
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+  programs.bash.enable = true;
+  programs.starship.enable = true;
 }

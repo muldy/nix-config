@@ -89,8 +89,7 @@
     description = "muldy";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-    discord
-    thunderbird
+
     ];
   };
 
@@ -111,8 +110,10 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
+    discord
+    kitty
+    openrgb-with-all-plugins
+    thunderbird
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
