@@ -56,6 +56,8 @@
     pkgs.tree
     pkgs.tree-sitter
     pkgs.yq
+    pkgs.wget
+    (pkgs.nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" "Ubuntu" "UbuntuMono" "FiraCode" "FiraMono" ]; })
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

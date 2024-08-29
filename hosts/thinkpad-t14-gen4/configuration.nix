@@ -8,7 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ../../programs/fonts.nix
+      #../../programs/fonts.nix
       inputs.home-manager.nixosModules.default
     ];
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -120,7 +120,6 @@
     openrgb-with-all-plugins
     thunderbird
     vscode
-    nerd-font-patcher
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
