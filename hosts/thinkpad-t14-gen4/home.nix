@@ -7,6 +7,7 @@
       ../../programs/neovim.nix
       ../../programs/zsh.nix
       ../../programs/kitty.nix
+      #../../programs/fonts.nix
       
   ];
   # Home Manager needs a bit of information about you and the paths it should
@@ -57,7 +58,8 @@
     pkgs.tree-sitter
     pkgs.yq
     pkgs.wget
-    (pkgs.nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" "Ubuntu" "UbuntuMono" "FiraCode" "FiraMono" ]; })
+    pkgs.eza
+    
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -99,7 +101,11 @@
   programs.home-manager.enable = true;
   programs.bash.enable = true;
   #programs.starship.enable = true;
-  fonts.fontconfig.enable = true;
+  #fonts.fontconfig.enable = true;
 
   wayland.windowManager.hyprland.enable = true;
+  programs.eza.enable = true;
+  programs.eza.enableBashIntegration = true;
+  programs.eza.enableZshIntegration = true;
+  programs.eza.icons = true;
 }
