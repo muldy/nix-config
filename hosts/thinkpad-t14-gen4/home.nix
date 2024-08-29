@@ -5,6 +5,9 @@
   [
       ../../programs/git.nix
       ../../programs/neovim.nix
+      ../../programs/zsh.nix
+      ../../programs/kitty.nix
+      
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -43,6 +46,7 @@
     #pkgs.terraform
 
     pkgs.git
+    pkgs.gnomeExtensions.tray-icons-reloaded
     pkgs.jq
     pkgs.k9s
     pkgs.kubectx
@@ -92,5 +96,8 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
   programs.bash.enable = true;
-  programs.starship.enable = true;
+  #programs.starship.enable = true;
+  fonts.fontconfig.enable = true;
+
+  wayland.windowManager.hyprland.enable = true;
 }

@@ -5,8 +5,8 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    auto-cpufreq.url = "github:AdnanHodzic/auto-cpufreq";
-    auto-cpufreq.inputs.nixpkgs.follows = "nixpkgs-unstable";
+    #auto-cpufreq.url = "github:AdnanHodzic/auto-cpufreq";
+    #auto-cpufreq.inputs.nixpkgs.follows = "nixpkgs-unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager";

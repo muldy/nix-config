@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ../../programs/fonts.nix
       inputs.home-manager.nixosModules.default
     ];
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -84,10 +85,12 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
+  programs.zsh.enable = true;
   users.users.muldy = {
     isNormalUser = true;
     description = "muldy";
     extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.zsh;
     packages = with pkgs; [
 
     ];
@@ -110,10 +113,14 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    auto-cpufreq
+    direnv
     discord
     kitty
     openrgb-with-all-plugins
     thunderbird
+    vscode
+    nerd-font-patcher
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -144,4 +151,8 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
 
+  environment.pathsToLink = [ "/share/zsh" ];
+  fonts.fontDir.enable = true;
+  
+  programs.hyprland.enable = true;
 }
