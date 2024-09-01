@@ -64,6 +64,11 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  #fingerprint
+  services.fprintd.enable = true;
+  services.fprintd.tod.enable = true;
+  services.fprintd.tod.driver = pkgs.libfprint-2-tod1-goodix;
+
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -88,7 +93,7 @@
   users.users.muldy = {
     isNormalUser = true;
     description = "muldy";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "input"];
     shell = pkgs.zsh;
     packages = with pkgs; [
 
@@ -112,13 +117,19 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    #discord
     auto-cpufreq
     direnv
-    discord
+    discord-canary
+    gnomeExtensions.tray-icons-reloaded
+    gpaste
     kitty
     openrgb-with-all-plugins
     thunderbird
+    unzip
     vscode
+    xwaylandvideobridge
+    fprintd
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -153,4 +164,6 @@
   fonts.fontDir.enable = true;
   
   programs.hyprland.enable = true;
+
+  
 }

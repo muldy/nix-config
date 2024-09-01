@@ -13,6 +13,7 @@
 	programs.zsh.historySubstringSearch.enable = true;
 	programs.zsh.historySubstringSearch.searchDownKey = "$terminfo[kcud1]";
 	programs.zsh.historySubstringSearch.searchUpKey = "$terminfo[kcuu1]";
+	programs.zsh.history.ignoreAllDups = true;
 
 
 	programs.zsh.oh-my-zsh.enable = true;
@@ -32,9 +33,21 @@
 	 			owner = "MichaelAquilina";
 	 			repo = "zsh-you-should-use";
 	 			rev = "f13d39a1ae84219e4ee14e77d31bb774c91f2fe3";
-	 			sha256 = "+3iAmWXSsc4OhFZqAMTwOL7AAHBp5ZtGGtvqCnEOYc0=";
+			sha256 = "+3iAmWXSsc4OhFZqAMTwOL7AAHBp5ZtGGtvqCnEOYc0=";
 	 		};
 	 	}
 	 ];
-	 programs.zsh.envExtra = "export YSU_MESSAGE_POSITION=\"after\"";
+	# programs.zsh.envExtra = ''
+	# '';
+
+
+	#xdg.configFile."nvim/" = {
+ #   source = (pkgs.callPackage ../pkgs/nvchad/default.nix{}).nvchad;
+ # };
+
+	programs.zsh.shellAliases = {
+	pbcopy = "gpaste-client";
+	pbpaste = "echo `gpaste-cient get --use-index 0 --reverse `";
+		
+	};
 }

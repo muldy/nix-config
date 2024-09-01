@@ -7,7 +7,7 @@
       ../../programs/neovim.nix
       ../../programs/zsh.nix
       ../../programs/kitty.nix
-      #../../programs/fonts.nix
+      ../../programs/hyprland.nix
       
   ];
   # Home Manager needs a bit of information about you and the paths it should
@@ -46,19 +46,62 @@
     #pkgs.nixos.direnv
     #pkgs.terraform
 
+    pkgs.arandr
+    pkgs.coreutils-prefixed
+    pkgs.eza
+    pkgs.gcc
     pkgs.git
-    pkgs.gnomeExtensions.tray-icons-reloaded
+    pkgs.git-doc
+    pkgs.gnumake
     pkgs.jq
     pkgs.k9s
+    pkgs.kubectl
     pkgs.kubectx
     pkgs.kubernetes-helm
     pkgs.kustomize
     pkgs.pre-commit
+    pkgs.ripgrep
     pkgs.tree
     pkgs.tree-sitter
-    pkgs.yq
     pkgs.wget
-    pkgs.eza
+    pkgs.wofi
+    pkgs.yq
+    #pkgs.swaybg
+    #pkgs.swayidle
+    #pkgs.swaylock
+    #pkgs.wlroots
+    #pkgs.wl-clipboard
+    #pkgs.wl-paste
+    pkgs.waybar
+    #pkgs.wofi
+    #pkgs.mako
+    #pkgs.grim
+    #pkgs.slurp
+    #pkgs.wf-recorder
+    #pkgs.light
+    #pkgs.yad
+    #pkgs.xfce.thunar
+    #pkgs.geany
+    #pkgs.mpv
+    #pkgs.mpd
+    ##pkgs.mpc
+    #pkgs.ncmpcpp
+    #pkgs.viewnior 
+    #pkgs.imagemagick
+    #pkgs.polkit_gnome
+    #pkgs.xwayland
+    #pkgs.dunst
+    #pkgs.wbg
+    #pkgs.hyprland-per-window-layout
+    #pkgs.hyprland-monitor-attached
+    #pkgs.gammastep
+    #pkgs.thunar
+    #pkgs.easyeffects
+    pkgs.pavucontrol
+    pkgs.sway
+    pkgs.nodejs_22
+
+
     
   ];
 
@@ -103,9 +146,11 @@
   #programs.starship.enable = true;
   #fonts.fontconfig.enable = true;
 
-  wayland.windowManager.hyprland.enable = true;
   programs.eza.enable = true;
   programs.eza.enableBashIntegration = true;
   programs.eza.enableZshIntegration = true;
   programs.eza.icons = true;
+
+
+  
 }
