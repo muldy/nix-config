@@ -8,6 +8,8 @@
       ../../programs/zsh.nix
       ../../programs/kitty.nix
       ../../programs/hyprland.nix
+      ../../programs/eza.nix
+      ../../programs/tmux.nix
       
   ];
   # Home Manager needs a bit of information about you and the paths it should
@@ -100,6 +102,7 @@
     pkgs.pavucontrol
     pkgs.sway
     pkgs.nodejs_22
+    pkgs.fh
 
 
     
@@ -136,9 +139,10 @@
   #
   #  /etc/profiles/per-user/muldy/etc/profile.d/hm-session-vars.sh
   #
-  #home.sessionVariables = {
+  home.sessionVariables = {
   #  EDITOR = "vim";
-  #};
+    DG_DATA_DIRS = "$XDG_DATA_DIRS:/usr/share:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share";
+  };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -146,10 +150,6 @@
   #programs.starship.enable = true;
   #fonts.fontconfig.enable = true;
 
-  programs.eza.enable = true;
-  programs.eza.enableBashIntegration = true;
-  programs.eza.enableZshIntegration = true;
-  programs.eza.icons = true;
 
 
   
