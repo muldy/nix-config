@@ -120,7 +120,7 @@
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
     # ".screenrc".source = dotfiles/screenrc;
-    ".config/ohmyposh/zen.toml".source = ../dotfiles/oh-my-posh.toml;
+    ".config/ohmyposh/zen.toml".source = ../../dotfiles/oh-my-posh.toml;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
