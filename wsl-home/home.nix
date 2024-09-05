@@ -1,15 +1,23 @@
 { config, pkgs, ... }:
 
 {
+#   inputs = {
+#	   nvchadGit = builtins.fetchGit {
+#		   url = "https://github.com/NvChad/starteri";
+#		   rev = "0qndqrzlkm5x3n8jzlmawx2q9mjd40rlk5yzba5lw3vv7hrhj377";
+#	   };
+#   }
+
    imports = 
   [
       ../programs/git.nix
-      #../programs/neovim.nix
+      ../programs/neovim.nix
       ../programs/zsh.nix
       #../programs/kitty.nix
       #../programs/hyprland.nix
       ../programs/eza.nix
       ../programs/tmux.nix
+      ../programs/oh-my-posh.nix
       
   ];
   # Home Manager needs a bit of information about you and the paths it should
@@ -39,8 +47,10 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
-    pkgs.eza
-    pkgs.zsh
+    #pkgs.eza
+    #pkgs.zsh
+    pkgs.fzf
+    pkgs.gcc
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -50,6 +60,7 @@
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
     # ".screenrc".source = dotfiles/screenrc;
+    ".config/ohmyposh/zen.toml".source = ../dotfiles/oh-my-posh.toml;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
@@ -66,11 +77,12 @@
   #
   #  ~/.nix-profile/etc/profile.d/hm-session-vars.sh
   home.sessionVariables = {
-    EDITOR = "vim";
+    #EDITOR = "vim";
   };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
   programs.bash.enable = true;
-  programs.zsh.enable = true;
+  #programs.zsh.enable = true;
+  programs.oh-my-posh.enable = true;
 }
