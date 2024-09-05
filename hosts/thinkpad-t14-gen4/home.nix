@@ -68,6 +68,7 @@
     pkgs.wget
     pkgs.wofi
     pkgs.yq
+    pkgs.htop
     #pkgs.swaybg
     #pkgs.swayidle
     #pkgs.swaylock
@@ -103,6 +104,8 @@
     pkgs.sway
     pkgs.nodejs_22
     pkgs.fh
+
+
 
 
     

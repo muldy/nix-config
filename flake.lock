@@ -20,36 +20,18 @@
         "type": "github"
       }
     },
-    "neovim-nvchad-flake": {
-      "inputs": {
-        "nixpkgs": "nixpkgs",
-        "utils": "utils"
-      },
-      "locked": {
-        "lastModified": 1719916530,
-        "narHash": "sha256-UXqrpShD0mgIuP/mMsHuhw75ORGYJWP+w+/sQ5DQn1A=",
-        "rev": "33b1237c2ded18a2f2ae5216a87d278aa114fa96",
-        "revCount": 19,
-        "type": "tarball",
-        "url": "https://api.flakehub.com/f/pinned/dko1905/neovim-nvchad-flake/0.1.19%2Brev-33b1237c2ded18a2f2ae5216a87d278aa114fa96/01907304-52ff-7c63-bf72-8563accaaf79/source.tar.gz"
-      },
-      "original": {
-        "type": "tarball",
-        "url": "https://flakehub.com/f/dko1905/neovim-nvchad-flake/0.1.19.tar.gz"
-      }
-    },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1719468428,
-        "narHash": "sha256-vN5xJAZ4UGREEglh3lfbbkIj+MPEYMuqewMn4atZFaQ=",
+        "lastModified": 1724224976,
+        "narHash": "sha256-Z/ELQhrSd7bMzTO8r7NZgi9g5emh+aRKoCdaAv5fiO0=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "1e3deb3d8a86a870d925760db1a5adecc64d329d",
+        "rev": "c374d94f1536013ca8e92341b540eba4c22f9c62",
         "type": "github"
       },
       "original": {
         "owner": "nixos",
-        "ref": "nixpkgs-unstable",
+        "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -70,61 +52,28 @@
         "type": "github"
       }
     },
-    "nixpkgs_2": {
+    "nvchad-config": {
+      "flake": false,
       "locked": {
-        "lastModified": 1724224976,
-        "narHash": "sha256-Z/ELQhrSd7bMzTO8r7NZgi9g5emh+aRKoCdaAv5fiO0=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "c374d94f1536013ca8e92341b540eba4c22f9c62",
-        "type": "github"
+        "lastModified": 1716051740,
+        "narHash": "sha256-oAnFZ9HoNava/mBgo1PwWdFwKTuAcnlIEsDD/3dKYpM=",
+        "ref": "refs/heads/main",
+        "rev": "74203ed2c6c065ad7cc004edc1bee160cd87b2f6",
+        "revCount": 6,
+        "type": "git",
+        "url": "https://codeberg.org/daniel_chesters/nvchad_config"
       },
       "original": {
-        "owner": "nixos",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
+        "type": "git",
+        "url": "https://codeberg.org/daniel_chesters/nvchad_config"
       }
     },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
-        "neovim-nvchad-flake": "neovim-nvchad-flake",
-        "nixpkgs": "nixpkgs_2",
-        "nixpkgs-unstable": "nixpkgs-unstable"
-      }
-    },
-    "systems": {
-      "locked": {
-        "lastModified": 1681028828,
-        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
-        "owner": "nix-systems",
-        "repo": "default",
-        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-systems",
-        "repo": "default",
-        "type": "github"
-      }
-    },
-    "utils": {
-      "inputs": {
-        "systems": "systems"
-      },
-      "locked": {
-        "lastModified": 1710146030,
-        "narHash": "sha256-SZ5L6eA7HJ/nmkzGG7/ISclqe6oZdOZTNoesiInkXPQ=",
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "rev": "b1d9ab70662946ef0850d488da1c9019f3a9752a",
-        "type": "github"
-      },
-      "original": {
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "type": "github"
+        "nixpkgs": "nixpkgs",
+        "nixpkgs-unstable": "nixpkgs-unstable",
+        "nvchad-config": "nvchad-config"
       }
     }
   },
