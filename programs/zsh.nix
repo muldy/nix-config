@@ -1,12 +1,12 @@
 { config, pkgs, environment,  ...}:
 {
 	programs.zsh.enable = true;
+	programs.zsh.package = pkgs.zsh;
 	programs.zsh.enableVteIntegration = true;
 	programs.zsh.dotDir = ".config/zsh";
 	
 	programs.zsh.enableCompletion = true;
 	programs.zsh.autosuggestion.enable = true;
-	programs.zsh.autosuggestion.strategy = ["history"];
 
 	programs.zsh.syntaxHighlighting.enable = true;
 
