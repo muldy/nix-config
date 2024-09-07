@@ -56,6 +56,7 @@
     pkgs.gcc
     pkgs.git
     pkgs.git-doc
+    pkgs.git-extras
     pkgs.gnumake
     pkgs.jq
     pkgs.k9s
@@ -66,51 +67,18 @@
     pkgs.pre-commit
     pkgs.ripgrep
     pkgs.tree
+    pkgs.neofetch
     pkgs.tree-sitter
     pkgs.wget
     pkgs.wofi
     pkgs.yq
     pkgs.htop
-    #pkgs.swaybg
-    #pkgs.swayidle
-    #pkgs.swaylock
-    #pkgs.wlroots
-    #pkgs.wl-clipboard
-    #pkgs.wl-paste
     pkgs.waybar
-    #pkgs.wofi
-    #pkgs.mako
-    #pkgs.grim
-    #pkgs.slurp
-    #pkgs.wf-recorder
-    #pkgs.light
-    #pkgs.yad
-    #pkgs.xfce.thunar
-    #pkgs.geany
-    #pkgs.mpv
-    #pkgs.mpd
-    ##pkgs.mpc
-    #pkgs.ncmpcpp
-    #pkgs.viewnior 
-    #pkgs.imagemagick
-    #pkgs.polkit_gnome
-    #pkgs.xwayland
-    #pkgs.dunst
-    #pkgs.wbg
-    #pkgs.hyprland-per-window-layout
-    #pkgs.hyprland-monitor-attached
-    #pkgs.gammastep
-    #pkgs.thunar
-    #pkgs.easyeffects
     pkgs.pavucontrol
     pkgs.sway
     pkgs.nodejs_22
     pkgs.fh
 
-
-
-
-    
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

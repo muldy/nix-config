@@ -7,17 +7,10 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
       inputs.home-manager.nixosModules.default
     ];
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  boot.initrd.luks.devices."luks-ed5c62de-00df-4048-8a7d-9ebe3310e497".device = "/dev/disk/by-uuid/ed5c62de-00df-4048-8a7d-9ebe3310e497";
-  networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -120,6 +113,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    vim
     #discord
     auto-cpufreq
     direnv

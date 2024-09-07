@@ -9,9 +9,8 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-     nvchad-config = {
-      url = "git+https://codeberg.org/daniel_chesters/nvchad_config";
-      flake = false;
+     nvchad = {
+      url = "github:dko1905/neovim-nvchad-flake";
     };
 
   };
@@ -25,7 +24,7 @@
       nixosConfigurations.t14g4 = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
-          ./hosts/thinkpad-t14-gen4/configuration.nix
+          ./hosts/thinkpad-t14-gen4/t14.nix
           inputs.home-manager.nixosModules.default
         ];
       };
