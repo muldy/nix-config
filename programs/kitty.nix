@@ -6,7 +6,7 @@
   #programs.kitty.font.name = "Fantasque Sans Mono";
   #programs.kitty.font.name = "Ubuntu";
   programs.kitty.font.package = (pkgs.nerdfonts.override { fonts = [ "UbuntuMono" "NerdFontsSymbolsOnly" ]; });
-  programs.kitty.font.size = 18;
+  programs.kitty.font.size = 17;
 
   programs.kitty.extraConfig = ''
     #remember_window_size  no

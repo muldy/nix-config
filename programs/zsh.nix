@@ -3,7 +3,7 @@
 	programs.zsh.enable = true;
 	programs.zsh.package = pkgs.zsh;
 	programs.zsh.enableVteIntegration = true;
-	programs.zsh.dotDir = ".config/zsh";
+	#programs.zsh.dotDir = ".config/zsh";
 	
 	programs.zsh.enableCompletion = true;
 	programs.zsh.autosuggestion.enable = true;
