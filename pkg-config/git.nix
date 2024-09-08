@@ -2,7 +2,7 @@
 {
 	# git 
 	programs.git.enable = true;
-	#programs.git.package = pkgs.git;
+	programs.git.package = pkgs.git;
 
 	programs.git.delta.enable = true;
 	programs.git.lfs.enable = true;

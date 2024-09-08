@@ -6,12 +6,12 @@
       ../../pkg-config/git.nix
       ../../pkg-config/gh.nix
       ../../pkg-config/neovim.nix
-      ../../pkg-config/zsh.nix
       ../../pkg-config/kitty.nix
       ../../pkg-config/hyprland.nix
       ../../pkg-config/eza.nix
       ../../pkg-config/tmux.nix
       ../../pkg-config/oh-my-posh.nix
+      ../../pkg-config/zsh.nix
       
   ];
   # Home Manager needs a bit of information about you and the paths it should
@@ -40,8 +40,8 @@
     pkgs.fh
     pkgs.fzf
     pkgs.gcc
-    #pkgs.git-doc
-    #pkgs.git-extras
+    pkgs.git-doc
+    pkgs.git-extras
     pkgs.gnumake
     pkgs.htop
     pkgs.jq
