@@ -113,20 +113,25 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    vim
-    #discord
+    arandr
     auto-cpufreq
     direnv
-    discord-canary
+    discord
+    fprintd
     gnomeExtensions.tray-icons-reloaded
     gpaste
     kitty
+    (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" "Ubuntu" "UbuntuMono" "FiraCode" "FiraMono" ]; })
     openrgb-with-all-plugins
+    pavucontrol
+    sway
     thunderbird
     unzip
+    vim
     vscode
+    waybar
+    wofi
     xwaylandvideobridge
-    fprintd
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

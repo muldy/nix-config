@@ -3,15 +3,15 @@
 {
   imports = 
   [
-      ../../programs/git.nix
-      #../../programs/gh.nix
-      ../../programs/neovim.nix
-      ../../programs/zsh.nix
-      ../../programs/kitty.nix
-      ../../programs/hyprland.nix
-      ../../programs/eza.nix
-      ../../programs/tmux.nix
-      ../../programs/oh-my-posh.nix
+      ../../pkg-config/git.nix
+      ../../pkg-config/gh.nix
+      ../../pkg-config/neovim.nix
+      ../../pkg-config/zsh.nix
+      ../../pkg-config/kitty.nix
+      ../../pkg-config/hyprland.nix
+      ../../pkg-config/eza.nix
+      ../../pkg-config/tmux.nix
+      ../../pkg-config/oh-my-posh.nix
       
   ];
   # Home Manager needs a bit of information about you and the paths it should
@@ -36,33 +36,28 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
-    pkgs.arandr
     pkgs.coreutils-prefixed
+    pkgs.fh
     pkgs.fzf
     pkgs.gcc
-    pkgs.gnumake
     #pkgs.git-doc
     #pkgs.git-extras
+    pkgs.gnumake
+    pkgs.htop
     pkgs.jq
     pkgs.k9s
     pkgs.kubectl
     pkgs.kubectx
     pkgs.kubernetes-helm
     pkgs.kustomize
+    pkgs.neofetch
+    pkgs.nodejs_22
     pkgs.pre-commit
     pkgs.ripgrep
     pkgs.tree
-    pkgs.neofetch
     pkgs.tree-sitter
     pkgs.wget
-    pkgs.wofi
     pkgs.yq
-    pkgs.htop
-    pkgs.waybar
-    pkgs.pavucontrol
-    pkgs.sway
-    pkgs.nodejs_22
-    pkgs.fh
 
   ];
 
@@ -102,6 +97,7 @@
   programs.bash.enable = true;
   #programs.starship.enable = true;
   #fonts.fontconfig.enable = true;
+
 
 
 
