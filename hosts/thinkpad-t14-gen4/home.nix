@@ -4,7 +4,7 @@
   imports = 
   [
       ../../pkg-config/git.nix
-      ../../pkg-config/gh.nix
+      #../../pkg-config/gh.nix
       ../../pkg-config/neovim.nix
       ../../pkg-config/kitty.nix
       ../../pkg-config/hyprland.nix
@@ -12,6 +12,7 @@
       ../../pkg-config/tmux.nix
       ../../pkg-config/oh-my-posh.nix
       ../../pkg-config/zsh.nix
+      ../../pkg-config/wpaperd.nix
       
   ];
   # Home Manager needs a bit of information about you and the paths it should
@@ -36,6 +37,7 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
+    pkgs.bat
     pkgs.coreutils-prefixed
     pkgs.fh
     pkgs.fzf
@@ -58,11 +60,13 @@
     pkgs.tree-sitter
     pkgs.wget
     pkgs.yq
+    pkgs.wpaperd
 
   ];
 
   home.file = {
     ".config/ohmyposh/zen.toml".source = ../../dotfiles/oh-my-posh.toml;
+    ".config/wpaperd/config.toml".source = ../../dotfiles/wpaperd.toml;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
@@ -88,13 +92,16 @@
   #  /etc/profiles/per-user/muldy/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    EDITOR = "vim";
+    #EDITOR = "vim";
     DG_DATA_DIRS = "$XDG_DATA_DIRS:/usr/share:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share";
+    YSU_HARDCORE = 1;
   };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
   programs.bash.enable = true;
+  #programs.neovim.enable = true;
+	#programs.neovim.defaultEditor = true;
   #programs.starship.enable = true;
   #fonts.fontconfig.enable = true;
 

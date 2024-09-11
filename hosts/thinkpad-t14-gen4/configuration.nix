@@ -144,6 +144,8 @@
 
   # List services that you want to enable:
   services.tailscale.enable = true;
+  services.power-profiles-daemon.enable = false;
+  services.auto-cpufreq.enable = true;
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
