@@ -12,7 +12,6 @@
       ../../pkg-config/tmux.nix
       ../../pkg-config/oh-my-posh.nix
       ../../pkg-config/zsh.nix
-      ../../pkg-config/wpaperd.nix
       
   ];
   # Home Manager needs a bit of information about you and the paths it should
@@ -61,13 +60,11 @@
     #pkgs.variety
     pkgs.wget
     pkgs.yq
-    pkgs.wpaperd
 
   ];
 
   home.file = {
     ".config/ohmyposh/zen.toml".source = ../../dotfiles/oh-my-posh.toml;
-    ".config/wpaperd/config.toml".source = ../../dotfiles/wpaperd.toml;
     ".config/variety/variety.conf".source = ../../dotfiles/variety.conf;
 
     # # You can also set the file content immediately.
