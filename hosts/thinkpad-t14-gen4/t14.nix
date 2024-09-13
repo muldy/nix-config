@@ -5,13 +5,17 @@
 
 {
   imports =
-    [  ./configuration.nix
+    [  
+      ./configuration.nix
      (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.kernelParams = ["quiet"];
+
+  boot.plymouth.enable = true;
 
   boot.initrd.luks.devices."luks-ed5c62de-00df-4048-8a7d-9ebe3310e497".device = "/dev/disk/by-uuid/ed5c62de-00df-4048-8a7d-9ebe3310e497";
   networking.hostName = "ThinkPad-t14"; # Define your hostname.

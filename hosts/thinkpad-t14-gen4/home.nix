@@ -58,6 +58,7 @@
     pkgs.ripgrep
     pkgs.tree
     pkgs.tree-sitter
+    #pkgs.variety
     pkgs.wget
     pkgs.yq
     pkgs.wpaperd
@@ -67,6 +68,7 @@
   home.file = {
     ".config/ohmyposh/zen.toml".source = ../../dotfiles/oh-my-posh.toml;
     ".config/wpaperd/config.toml".source = ../../dotfiles/wpaperd.toml;
+    ".config/variety/variety.conf".source = ../../dotfiles/variety.conf;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
