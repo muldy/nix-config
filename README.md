@@ -1,3 +1,13 @@
+# Determinate Nix Installer 
+
+```
+curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
+```
+
+# nix-darwin
+
+https://github.com/LnL7/nix-darwin?tab=readme-ov-file#flakes
+
 # Add and update nixos-hardware channel:
 
 ```
