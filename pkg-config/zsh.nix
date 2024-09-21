@@ -41,10 +41,6 @@
 	# '';
 
 
-	#xdg.configFile."nvim/" = {
- #   source = (pkgs.callPackage ../pkgs/nvchad/default.nix{}).nvchad;
- # };
-
 	programs.zsh.shellAliases = {
 	pbcopy = "gpaste-client";
 	pbpaste = "echo `gpaste-cient get --use-index 0 --reverse `";
