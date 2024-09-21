@@ -118,7 +118,9 @@
     direnv
     discord
     fprintd
+    gnomeExtensions.battery-health-charging
     gnomeExtensions.tray-icons-reloaded
+    gnomeExtensions.wallpaper-slideshow
     gpaste
     kitty
     (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" "Ubuntu" "UbuntuMono" "FiraCode" "FiraMono" ]; })
@@ -147,6 +149,46 @@
   services.power-profiles-daemon.enable = false;
   services.auto-cpufreq.enable = true;
 
+  services.auto-cpufreq.settings = {
+      charger = {
+        governor = "performance"; # string
+        energy_performance_preference = "performance"; # string
+        # platform_profile = "performance"; # Uncomment if needed
+        # scaling_min_freq = 800000; # Uncomment if needed (int in kHz)
+        # scaling_max_freq = 1000000; # Uncomment if needed (int in kHz)
+        turbo = "auto"; # string
+
+        # Uncomment to add ignored power supplies
+        # power_supply_ignore_list = {
+        #   name1 = "this";
+        #   name2 = "is";
+        #   name3 = "an";
+        #   name4 = "example";
+        # };
+      };
+
+      battery = {
+        governor = "powersave"; # string
+        energy_performance_preference = "power"; # string
+        # platform_profile = "low-power"; # Uncomment if needed
+        # scaling_min_freq = 800000; # Uncomment if needed (int in kHz)
+        # scaling_max_freq = 1000000; # Uncomment if needed (int in kHz)
+        turbo = "auto"; # string
+
+        # Uncomment for experimental battery threshold settings
+        # enable_thresholds = true; # boolean
+        # start_threshold = 0; # int
+        # stop_threshold = 100; # int
+
+        enable_thresholds = true;
+        start_threshold = 25;
+        stop_threshold = 90;
+        ideapad_laptop_conservation_mode=true;
+      };
+  };
+
+
+
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
@@ -168,6 +210,7 @@
   fonts.fontDir.enable = true;
   
   programs.hyprland.enable = true;
+  programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
 
   
 }
