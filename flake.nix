@@ -20,9 +20,12 @@
       url = "github:dko1905/neovim-nvchad-flake";
     };
 
+    nix-darwin.url = "github:LnL7/nix-darwin";
+    nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: 
+  outputs = { self, inix-darwin, nixpkgs, ... }@inputs: 
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};

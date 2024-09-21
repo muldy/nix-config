@@ -35,7 +35,7 @@
       system.stateVersion = 5;
 
       # The platform the configuration will be used on.
-      nixpkgs.hostPlatform = "aarch_64-darwin";
+      nixpkgs.hostPlatform = "aarch64-darwin";
     };
   in
   {
