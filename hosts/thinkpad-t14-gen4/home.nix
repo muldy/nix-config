@@ -75,6 +75,7 @@
     pkgs.htop
     pkgs.jq
     pkgs.k9s
+    pkgs.keybase-gui
     pkgs.kubectl
     pkgs.kubectx
     pkgs.kubernetes-helm

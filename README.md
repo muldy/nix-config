@@ -30,3 +30,8 @@ sudo nixos-rebuild switch
 ```
 sudo nix-env --delete-generations --profile /nix/var/nix/profiles/system 5d
 ```
+
+# Update configuration
+```
+sudo nixos-rebuild switch  --flake /home/muldy/nix-config/#t14g4 --use-substitutes
+```
