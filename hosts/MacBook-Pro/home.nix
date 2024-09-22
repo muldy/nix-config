@@ -12,6 +12,37 @@
       ../../pkg-config/oh-my-posh.nix
       ../../pkg-config/zsh.nix
   ];
+  home.packages = [
+    # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
+
+    # (pkgs.writeShellScriptBin "my-hello" ''
+    #   echo "Hello, ${config.home.username}!"
+    # '')
+    pkgs.bat
+    pkgs.coreutils-prefixed
+    pkgs.fh
+    pkgs.fzf
+    pkgs.gcc
+    pkgs.git-doc
+    pkgs.git-extras
+    pkgs.gnumake
+    pkgs.htop
+    pkgs.jq
+    pkgs.k9s
+    #pkgs.keybase-gui
+    pkgs.kubectl
+    pkgs.kubectx
+    pkgs.kubernetes-helm
+    pkgs.kustomize
+    pkgs.neofetch
+    pkgs.nodejs_22
+    pkgs.pre-commit
+    pkgs.tree
+    pkgs.tree-sitter
+    #pkgs.variety
+    pkgs.wget
+    pkgs.yq
+    ];
   home.file = {
     ".config/ohmyposh/zen.toml".source = ../../dotfiles/oh-my-posh.toml;
     ".config/variety/variety.conf".source = ../../dotfiles/variety.conf;

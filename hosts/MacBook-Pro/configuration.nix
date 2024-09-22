@@ -1,10 +1,23 @@
 { config, lib, pkgs, home-nanager,... }:
 {
 
-  environment.systemPackages =
-  [ 
-    pkgs.vim
+  environment.systemPackages = with pkgs; [
+    vim
+    direnv
+    ripgrep
+    (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" "Ubuntu" "UbuntuMono" "FiraCode" "FiraMono" ]; })
+
   ];
+
+  homebrew = {
+    enable = true;
+    global.autoUpdate = false;
+
+    casks = [ 
+	"kitty" 
+	"discord"
+	];
+  };
 
   users.users.muldy.home = "/Users/muldy";
   # Auto upgrade nix package and the daemon service.
@@ -24,6 +37,8 @@
   # Used for backwards compatibility, please read the changelog before changing.
   # $ darwin-rebuild changelog
   system.stateVersion = 5;
+
+  nix.configureBuildUsers = true;
   
   # The platform the configuration will be used on.
   nixpkgs.hostPlatform = "aarch64-darwin";
