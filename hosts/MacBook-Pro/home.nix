@@ -4,7 +4,7 @@
   home.stateVersion = "23.11";
   imports = 
   [
-      ../../pkg-config/git.nix
+      ../../pkg-config/git-work.nix
       ../../pkg-config/neovim.nix
       ../../pkg-config/kitty.nix
       ../../pkg-config/eza.nix
