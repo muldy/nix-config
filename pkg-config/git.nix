@@ -10,8 +10,8 @@
 
 #  programs.git.diff-so-fancy.enable = true;
 	
-  programs.git.userEmail = "muldy@urmeta.eu";
-	programs.git.userName = "muldy";
+  #programs.git.userEmail = "muldy@urmeta.eu";
+	#programs.git.userName = "muldy";
 
 
 #	programs.git.extraConfig = ''
