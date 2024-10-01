@@ -119,6 +119,7 @@
     discord
     fprintd
     gnomeExtensions.battery-health-charging
+    gnomeExtensions.caffeine
     gnomeExtensions.tray-icons-reloaded
     gnomeExtensions.wallpaper-slideshow
     gpaste
