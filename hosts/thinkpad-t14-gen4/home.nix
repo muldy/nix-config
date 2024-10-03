@@ -130,7 +130,7 @@
   programs.home-manager.enable = true;
   programs.bash.enable = true;
   #programs.neovim.enable = true;
-	#programs.neovim.defaultEditor = true;
+	programs.neovim.defaultEditor = true;
   #programs.starship.enable = true;
   #fonts.fontconfig.enable = true;
 
