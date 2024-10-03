@@ -118,6 +118,7 @@
     direnv
     discord
     fprintd
+    gnome.gnome-software
     gnomeExtensions.battery-health-charging
     gnomeExtensions.caffeine
     gnomeExtensions.tray-icons-reloaded

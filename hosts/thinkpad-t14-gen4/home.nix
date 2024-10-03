@@ -66,6 +66,7 @@
     # '')
     pkgs.bat
     pkgs.coreutils-prefixed
+    #pkgs.cura
     pkgs.fh
     pkgs.fzf
     pkgs.gcc
@@ -84,6 +85,7 @@
     pkgs.nodejs_22
     pkgs.pre-commit
     pkgs.ripgrep
+    pkgs.syncthing
     pkgs.tree
     pkgs.tree-sitter
     #pkgs.variety
