@@ -18,18 +18,20 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
+    pkgs.awscli2
     pkgs.bat
     pkgs.coreutils-prefixed
+    pkgs.dos2unix
     pkgs.fh
     pkgs.fzf
     pkgs.gcc
     pkgs.git-doc
     pkgs.git-extras
     pkgs.gnumake
+    pkgs.gnupg
     pkgs.htop
     pkgs.jq
     pkgs.k9s
-    #pkgs.keybase-gui
     pkgs.kubectl
     pkgs.kubectx
     pkgs.kubernetes-helm
