@@ -66,7 +66,6 @@
     # '')
     pkgs.bat
     pkgs.coreutils-prefixed
-    #pkgs.cura
     pkgs.fh
     pkgs.fzf
     pkgs.gcc

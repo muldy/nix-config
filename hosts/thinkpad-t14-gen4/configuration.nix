@@ -118,7 +118,8 @@
     direnv
     discord
     fprintd
-    gnome.gnome-software
+    #cura
+    gnome-software
     gnomeExtensions.battery-health-charging
     gnomeExtensions.caffeine
     gnomeExtensions.tray-icons-reloaded
