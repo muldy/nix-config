@@ -125,6 +125,8 @@
     gnomeExtensions.tray-icons-reloaded
     gnomeExtensions.wallpaper-slideshow
     gpaste
+    keybase
+    keybase-gui
     kitty
     (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" "Ubuntu" "UbuntuMono" "FiraCode" "FiraMono" ]; })
     openrgb-with-all-plugins
@@ -189,6 +191,9 @@
         ideapad_laptop_conservation_mode=true;
       };
   };
+
+  services.keybase.enable = true;
+  services.kbfs.enable = true;
 
 
 

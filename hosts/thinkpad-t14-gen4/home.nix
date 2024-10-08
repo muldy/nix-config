@@ -75,12 +75,12 @@
     pkgs.htop
     pkgs.jq
     pkgs.k9s
-    pkgs.keybase-gui
     pkgs.kubectl
     pkgs.kubectx
     pkgs.kubernetes-helm
     pkgs.kustomize
     pkgs.neofetch
+    pkgs.nettools
     pkgs.nodejs_22
     pkgs.pre-commit
     pkgs.ripgrep
@@ -88,6 +88,8 @@
     pkgs.tree
     pkgs.tree-sitter
     #pkgs.variety
+    pkgs.virtualenv
+    pkgs.wakelan
     pkgs.wget
     pkgs.yq
 
