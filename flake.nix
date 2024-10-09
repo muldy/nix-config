@@ -47,6 +47,7 @@
       darwinPackages = self.darwinConfigurations."MacBook-Pro".pkgs;
     in
     {
+      #t14g4
       nixosConfigurations.t14g4 = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
@@ -54,34 +55,38 @@
           inputs.home-manager.nixosModules.default
         ];
       };
+
+      #MacBook.Pro
       darwinConfigurations.MacBook-Pro = nix-darwin.lib.darwinSystem {
         system = "aarch64-darwin";
-        modules = [ 
-        ./hosts/MacBook-Pro/configuration.nix 
-	home-manager.darwinModules.home-manager
-            {
-              # `home-manager` config
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.muldy = import ./hosts/MacBook-Pro/home.nix;
-            }
-      nix-homebrew.darwinModules.nix-homebrew
-        {
-          nix-homebrew = {
-          enable = true;
-          # Apple Silicon Only: Also install Homebrew under the default Intel prefix for Rosetta 2
-          enableRosetta = true;
-          user = "muldy";
-          
-          taps = {
-            "homebrew/homebrew-core" = homebrew-core;
-            "homebrew/homebrew-cask" = homebrew-cask;
-            "homebrew/homebrew-bundle" = homebrew-bundle;
-          };
-          mutableTaps = false;
-          };
-      }
-	];
+        modules = 
+        [ 
+          ./hosts/MacBook-Pro/configuration.nix 
+          home-manager.darwinModules.home-manager
+          {
+            # `home-manager` config
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.muldy = import ./hosts/MacBook-Pro/home.nix;
+          }
+
+          nix-homebrew.darwinModules.nix-homebrew
+          {
+            nix-homebrew = {
+            enable = true;
+            # Apple Silicon Only: Also install Homebrew under the default Intel prefix for Rosetta 2
+            enableRosetta = true;
+            user = "muldy";
+            
+            taps = {
+              "homebrew/homebrew-core" = homebrew-core;
+              "homebrew/homebrew-cask" = homebrew-cask;
+              "homebrew/homebrew-bundle" = homebrew-bundle;
+            };
+            mutableTaps = false;
+            };
+          }
+        ];
       };
       # Expose the package set, including overlays, for convenience.
       darwinPackages = self.darwinConfigurations."MacBook-Pro".pkgs;
