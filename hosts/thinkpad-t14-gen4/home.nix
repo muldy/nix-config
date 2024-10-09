@@ -64,6 +64,7 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
+    pkgs.argocd
     pkgs.bat
     pkgs.coreutils-prefixed
     pkgs.fh
