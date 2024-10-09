@@ -11,6 +11,7 @@
       ../../pkg-config/tmux.nix
       ../../pkg-config/oh-my-posh.nix
       ../../pkg-config/zsh.nix
+#      ../../pkg-config/syncthing.nix
   ];
   home.packages = [
     # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
@@ -38,6 +39,7 @@
     pkgs.kustomize
     pkgs.neofetch
     pkgs.nodejs_22
+    pkgs.pinentry_mac
     pkgs.pre-commit
     pkgs.tree
     pkgs.tree-sitter

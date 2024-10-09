@@ -14,9 +14,10 @@
     global.autoUpdate = false;
 
     casks = [ 
-	"kitty" 
-	"discord"
-	];
+      "kitty" 
+      "discord"
+      "syncthing"
+    ];
   };
 
   users.users.muldy.home = "/Users/muldy";
