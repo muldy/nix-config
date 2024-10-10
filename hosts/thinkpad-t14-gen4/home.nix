@@ -32,7 +32,7 @@
   imports = 
   [
       ../../pkg-config/git.nix
-      #../../pkg-config/gh.nix
+      ../../pkg-config/gh.nix
       ../../pkg-config/neovim.nix
       ../../pkg-config/kitty.nix
       ../../pkg-config/hyprland.nix
@@ -83,6 +83,7 @@
     pkgs.neofetch
     pkgs.nettools
     pkgs.nodejs_22
+    pkgs.openssl
     pkgs.pre-commit
     pkgs.ripgrep
     pkgs.syncthing
