@@ -51,6 +51,8 @@
   #alias aws-profile='export AWS_PROFILE=$(sed -n "s/\[profile \(.*\)\]/\1/gp" ~/.aws/config | fzf)'
 
   #kubernetes
+  kns = "kubens";
+  kctx = "kubectx";
   k = "kubectl";
   ksys = "kubectl --namespace=kube-system";
   ka = "kubectl apply --recursive -f";
