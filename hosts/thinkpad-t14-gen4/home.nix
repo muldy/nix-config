@@ -66,6 +66,7 @@
     # '')
     pkgs.argocd
     pkgs.bat
+    pkgs.dig
     pkgs.coreutils-prefixed
     pkgs.fh
     pkgs.fzf

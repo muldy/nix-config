@@ -6,6 +6,12 @@
 
 	programs.git.delta.enable = true;
 	programs.git.lfs.enable = true;
+  programs.gh.gitCredentialHelper.enable = true;
+  programs.gh.gitCredentialHelper.hosts = [
+    "https://github.com"
+    "https://gist.github.com"
+    "https://gitea.app.urmeta.eu"
+  ];
 	#programs.gitui.enable = true;
 
 #  programs.git.diff-so-fancy.enable = true;

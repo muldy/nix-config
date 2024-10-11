@@ -124,6 +124,7 @@
     gnomeExtensions.caffeine
     gnomeExtensions.tray-icons-reloaded
     gnomeExtensions.wallpaper-slideshow
+    gnomeExtensions.custom-hot-corners-extended
     gpaste
     keybase
     keybase-gui
