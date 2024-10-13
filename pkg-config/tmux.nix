@@ -20,8 +20,10 @@
   ];
 
   programs.tmux.extraConfig = ''
-  set-option -sa terminal-overrides ",xterm*:Tc"
   set -g mouse on
+  set -g default-terminal "screen-256color"
+  #set-option -sa terminal-overrides ",xterm*:Tc"
+  set-option -sa terminal-overrides ",xterm-kitty:RGB"
 
   unbind C-b
   set -g prefix C-Space

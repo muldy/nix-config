@@ -113,25 +113,26 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" "Ubuntu" "UbuntuMono" "FiraCode" "FiraMono" ]; })
     arandr
     auto-cpufreq
     direnv
     discord
     fprintd
-    #cura
     gnome-software
     gnomeExtensions.battery-health-charging
     gnomeExtensions.caffeine
+    gnomeExtensions.custom-hot-corners-extended
+    gnomeExtensions.tailscale-status
     gnomeExtensions.tray-icons-reloaded
     gnomeExtensions.wallpaper-slideshow
-    gnomeExtensions.custom-hot-corners-extended
     gpaste
     keybase
     keybase-gui
     kitty
-    (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" "Ubuntu" "UbuntuMono" "FiraCode" "FiraMono" ]; })
     openrgb-with-all-plugins
     pavucontrol
+    python3
     sway
     thunderbird
     unzip

@@ -88,6 +88,7 @@
     pkgs.pre-commit
     pkgs.ripgrep
     pkgs.syncthing
+    pkgs.trayscale
     pkgs.tree
     pkgs.tree-sitter
     #pkgs.variety
@@ -138,6 +139,10 @@
 	programs.neovim.defaultEditor = true;
   #programs.starship.enable = true;
   #fonts.fontconfig.enable = true;
+
+  services.trayscale.enable = true;
+  services.trayscale.package = pkgs.trayscale;
+  services.trayscale.hideWindow = true;
 
 
 
