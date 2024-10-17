@@ -77,7 +77,9 @@
     pkgs.htop
     pkgs.jq
     pkgs.k9s
+    pkgs.krew
     pkgs.kubectl
+    pkgs.kubectl-cnpg
     pkgs.kubectx
     pkgs.kubernetes-helm
     pkgs.kustomize

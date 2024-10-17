@@ -119,6 +119,7 @@
     direnv
     discord
     fprintd
+    gnome.gpaste
     gnome-software
     gnomeExtensions.battery-health-charging
     gnomeExtensions.caffeine
