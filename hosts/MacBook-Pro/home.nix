@@ -41,6 +41,7 @@
     pkgs.nodejs_22
     pkgs.pinentry_mac
     pkgs.pre-commit
+    pkgs.sops
     pkgs.tree
     pkgs.tree-sitter
     #pkgs.variety
