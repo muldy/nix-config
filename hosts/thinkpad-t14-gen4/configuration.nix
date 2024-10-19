@@ -117,7 +117,11 @@
     arandr
     auto-cpufreq
     direnv
-    discord
+    (pkgs.discord.override {
+      # remove any overrides that you don't want
+      withOpenASAR = true;
+      withVencord = true;
+    })
     fprintd
     gnome-software
     gnomeExtensions.battery-health-charging
@@ -129,6 +133,7 @@
     keybase
     keybase-gui
     kitty
+    lm_sensors
     openrgb-with-all-plugins
     pavucontrol
     python3
