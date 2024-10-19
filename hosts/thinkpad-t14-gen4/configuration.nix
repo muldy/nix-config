@@ -120,14 +120,12 @@
     discord
     fprintd
     gnome-software
-    gnome.gpaste
     gnomeExtensions.battery-health-charging
     gnomeExtensions.caffeine
     gnomeExtensions.custom-hot-corners-extended
     gnomeExtensions.tailscale-status
     gnomeExtensions.tray-icons-reloaded
     gnomeExtensions.wallpaper-slideshow
-    gpaste
     keybase
     keybase-gui
     kitty
