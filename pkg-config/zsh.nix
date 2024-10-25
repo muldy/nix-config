@@ -42,8 +42,8 @@
 
 
 	programs.zsh.shellAliases = {
-	pbcopy = "gpaste-client";
-	pbpaste = "echo `gpaste-cient get --use-index 0 --reverse `";
+	#pbcopy = "gpaste-client";
+	#pbpaste = "echo `gpaste-cient get --use-index 0 --reverse `";
   #linux
 	#aws-profile = "export AWS_PROFILE=$(sed -n \"s/\[profile \(.*\)\]/\1/gp\" ~/.aws/config | fzf)";
   aws-profile = "export AWS_PROFILE=$(sed -n \"s/\\[profile \\(.*\\)\\]/\\1/gp\" ~/.aws/config | fzf)";
