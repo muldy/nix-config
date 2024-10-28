@@ -64,6 +64,7 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
+    pkgs.age
     pkgs.argocd
     pkgs.bat
     pkgs.dig
@@ -74,6 +75,7 @@
     pkgs.git-doc
     pkgs.git-extras
     pkgs.gnumake
+    pkgs.gnupg
     pkgs.htop
     pkgs.jq
     pkgs.k9s
@@ -83,13 +85,16 @@
     pkgs.kubectx
     pkgs.kubernetes-helm
     pkgs.kustomize
+    pkgs.kustomize-sops
     pkgs.neofetch
     pkgs.nettools
     pkgs.nodejs_22
     pkgs.openssl
     pkgs.pre-commit
+    pkgs.pinentry-tty
     pkgs.ripgrep
     pkgs.syncthing
+    pkgs.sops
     pkgs.trayscale
     pkgs.tree
     pkgs.tree-sitter

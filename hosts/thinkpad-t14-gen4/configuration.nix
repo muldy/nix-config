@@ -130,11 +130,14 @@
     gnomeExtensions.tailscale-status
     gnomeExtensions.tray-icons-reloaded
     gnomeExtensions.wallpaper-slideshow
+    pinentry-gnome3
     keybase
     keybase-gui
     kitty
     lm_sensors
+    nfs-utils
     openrgb-with-all-plugins
+    openttd
     pavucontrol
     python3
     sway
@@ -144,6 +147,7 @@
     vscode
     waybar
     wofi
+    xclip
     xwaylandvideobridge
   ];
 
