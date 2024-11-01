@@ -67,8 +67,11 @@
     pkgs.age
     pkgs.argocd
     pkgs.bat
+    pkgs.bitwarden-desktop
+    pkgs.bitwarden-cli
     pkgs.dig
     pkgs.coreutils-prefixed
+    pkgs.file
     pkgs.fh
     pkgs.fzf
     pkgs.gcc
