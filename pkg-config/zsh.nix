@@ -37,8 +37,12 @@
 	 		};
 	 	}
 	 ];
-	# programs.zsh.envExtra = ''
-	# '';
+	
+
+  programs.zsh.initExtra = ''
+		export PATH=$PATH:$HOME/bin
+    export EDITOR=vim 
+	'';
 
 
 	programs.zsh.shellAliases = {
