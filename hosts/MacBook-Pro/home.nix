@@ -45,6 +45,7 @@
     pkgs.tree
     pkgs.tree-sitter
     #pkgs.variety
+    pkgs.virtualenv
     pkgs.wget
     pkgs.yq
     ];
