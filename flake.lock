@@ -129,11 +129,19 @@
     "homebrew-bundle": {
       "flake": false,
       "locked": {
+<<<<<<< Updated upstream
         "lastModified": 1731028300,
         "narHash": "sha256-k0iyDC/J5YeIjxVAYYBMT8lvCD1Ny1TsN0eoYrixs9g=",
         "owner": "homebrew",
         "repo": "homebrew-bundle",
         "rev": "bb8ff046665f91ff4d55d11bcc4cf317a5d47d27",
+=======
+        "lastModified": 1730711483,
+        "narHash": "sha256-lD71Dat40qHVEn+Go1r6EWV55rvF7C0iBoixlYcX1cE=",
+        "owner": "homebrew",
+        "repo": "homebrew-bundle",
+        "rev": "c9c3f604262d59ef9aa549c4d1bf3a5af9d60131",
+>>>>>>> Stashed changes
         "type": "github"
       },
       "original": {
@@ -145,11 +153,19 @@
     "homebrew-cask": {
       "flake": false,
       "locked": {
+<<<<<<< Updated upstream
         "lastModified": 1731138570,
         "narHash": "sha256-hrtCOAxrgt3O0N76FS0lm85QWg00OWuxD0r1ftGlRIo=",
         "owner": "homebrew",
         "repo": "homebrew-cask",
         "rev": "97e1c0f606e32b7a99d781637c04853f2734bedc",
+=======
+        "lastModified": 1730723119,
+        "narHash": "sha256-FGXtNQNANB0cVW9dNy4bRaShEO5FCgKSf8o6eu2njVU=",
+        "owner": "homebrew",
+        "repo": "homebrew-cask",
+        "rev": "5f0387e91bf455b8e2fdc70405362b15d6f97c66",
+>>>>>>> Stashed changes
         "type": "github"
       },
       "original": {
@@ -161,11 +177,19 @@
     "homebrew-core": {
       "flake": false,
       "locked": {
+<<<<<<< Updated upstream
         "lastModified": 1731139996,
         "narHash": "sha256-uIro1X93sgNCpTT2bzJxIbXqzdAffFNro2FKGZrWWK0=",
         "owner": "homebrew",
         "repo": "homebrew-core",
         "rev": "7273bd37ca2a20921b9a6e74637cfe4a41c98218",
+=======
+        "lastModified": 1730722733,
+        "narHash": "sha256-1PEqcwqHFllvkUfp+oOBLTAJo7n6s5+vxhhoTzDJzQs=",
+        "owner": "homebrew",
+        "repo": "homebrew-core",
+        "rev": "344cef1ba5ecee2c28d188c6e4e25025c3c597a1",
+>>>>>>> Stashed changes
         "type": "github"
       },
       "original": {
@@ -217,11 +241,19 @@
         "xdph": "xdph"
       },
       "locked": {
+<<<<<<< Updated upstream
         "lastModified": 1731119644,
         "narHash": "sha256-lS4+x6LIDExLIgs2kgBdOIKxTZYiqq/DywqvY8g2I8E=",
         "ref": "refs/heads/main",
         "rev": "cca227a53e10b9101d2fbcfb99e6360b416d7168",
         "revCount": 5432,
+=======
+        "lastModified": 1730652188,
+        "narHash": "sha256-3L+Jh3J3JvJPsGTqSOIKjwZy/AysR0WOLgGKNkXFqxs=",
+        "ref": "refs/heads/main",
+        "rev": "cd0d0491261728260de3d1aff150e1b6c05f9e86",
+        "revCount": 5407,
+>>>>>>> Stashed changes
         "submodules": true,
         "type": "git",
         "url": "https://github.com/hyprwm/Hyprland"
@@ -373,11 +405,19 @@
         ]
       },
       "locked": {
+<<<<<<< Updated upstream
         "lastModified": 1731140526,
         "narHash": "sha256-lPCTS5Jvypptq//q86G1BoggCXSWEMwDw1C1ky8P2vs=",
         "owner": "LnL7",
         "repo": "nix-darwin",
         "rev": "3224bb2f7c998448e4eb9b5df93195af2e268a30",
+=======
+        "lastModified": 1730698801,
+        "narHash": "sha256-sq68bCmk4tCXSt5CoRNimfigIZSLJSpNi/gjFtNLjRE=",
+        "owner": "LnL7",
+        "repo": "nix-darwin",
+        "rev": "189d2d422c773fa065cc9c72e6806f007ebb9be0",
+>>>>>>> Stashed changes
         "type": "github"
       },
       "original": {
@@ -683,11 +723,19 @@
         ]
       },
       "locked": {
+<<<<<<< Updated upstream
         "lastModified": 1730743262,
         "narHash": "sha256-iTLqj3lU8kFehPm5tXpctzkD274t/k1nwSSq3qCWXeg=",
         "owner": "hyprwm",
         "repo": "xdg-desktop-portal-hyprland",
         "rev": "09b23cef06fe248e61cec8862c04b9bcb62f4b6d",
+=======
+        "lastModified": 1730187742,
+        "narHash": "sha256-M0umGIIvVFqCwA0fQ5edivMTbRYA0r/5tXK8sr+M7EA=",
+        "owner": "hyprwm",
+        "repo": "xdg-desktop-portal-hyprland",
+        "rev": "998f646762b94fbac61b0271ce66d3e617262858",
+>>>>>>> Stashed changes
         "type": "github"
       },
       "original": {

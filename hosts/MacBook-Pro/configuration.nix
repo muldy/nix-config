@@ -44,9 +44,9 @@
   # The platform the configuration will be used on.
   nixpkgs.hostPlatform = "aarch64-darwin";
 
-  programs.zsh.initExtra = ''
-		eval "$(/opt/homebrew/bin/brew shellenv)"
-	'';
+#  programs.zsh.initExtra = ''
+#		eval "$(/opt/homebrew/bin/brew shellenv)"
+#	'';
 
 }
 
