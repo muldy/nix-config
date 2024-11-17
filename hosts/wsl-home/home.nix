@@ -14,7 +14,6 @@
       ../programs/neovim.nix
       ../programs/zsh.nix
       #../programs/kitty.nix
-      #../programs/hyprland.nix
       ../programs/eza.nix
       ../programs/tmux.nix
       ../programs/oh-my-posh.nix
