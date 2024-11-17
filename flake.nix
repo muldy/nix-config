@@ -7,13 +7,6 @@
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
 
-    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-
-    hyprland-plugins = {
-      url = "github:hyprwm/hyprland-plugins";
-      inputs.hyprland.follows = "hyprland";
-    };
-
     nix-homebrew = { url = "github:zhaofengli-wip/nix-homebrew"; };
 
     home-manager = {
@@ -36,10 +29,14 @@
       flake = false;
     };
 
+  nixos-hardware = { 
+  	url = "github:NixOS/nixos-hardware/master";
+	};
+
   };
 
   outputs = { self, nix-darwin, nixpkgs, home-manager, nix-homebrew
-    , homebrew-core, homebrew-cask, homebrew-bundle, ... }@inputs: 
+    , homebrew-core, homebrew-cask, homebrew-bundle, nixos-hardware, ... }@inputs: 
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -51,7 +48,16 @@
       nixosConfigurations.t14g4 = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
+	  nixos-hardware.nixosModules.lenovo-thinkpad-t440p
           ./hosts/thinkpad-t14-gen4/hardware-configuration.nix
+          inputs.home-manager.nixosModules.default
+        ];
+      };
+      #t440p
+      nixosConfigurations.t440p= nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs;};
+        modules = [
+	  ./hosts/nix-config-t440p/hardware-configuration.nix
           inputs.home-manager.nixosModules.default
         ];
       };
