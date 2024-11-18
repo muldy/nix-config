@@ -88,7 +88,6 @@
   #wifi issues
   hardware.enableRedistributableFirmware = true;
   # Enable sound with pipewire.
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -126,7 +125,7 @@
     # also pass inputs to home-manager modules
     extraSpecialArgs = {inherit inputs;};
     users = {
-      "muldy" = import ./home.nix;
+      "mulldy" = import ./home.nix;
     };
   };
 
