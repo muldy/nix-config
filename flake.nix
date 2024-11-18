@@ -61,6 +61,14 @@
           inputs.home-manager.nixosModules.default
         ];
       };
+      #x260
+      nixosConfigurations.x260= nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs;};
+        modules = [
+	  ./hosts/nix-config-x260/hardware-configuration.nix
+          inputs.home-manager.nixosModules.default
+        ];
+      };
 
       #MacBook.Pro
       darwinConfigurations.MacBook-Pro = nix-darwin.lib.darwinSystem {
