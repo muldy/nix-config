@@ -5,9 +5,13 @@
 
 {
   imports =
-    [ (modulesPath + "/profiles/qemu-guest.nix")
+    [ 
+      ./configuration.nix
+     (modulesPath + "/profiles/qemu-guest.nix")
     ];
 
+  # Bootloader.
+  boot.loader.systemd-boot.enable = true;
   boot.initrd.availableKernelModules = [ "ata_piix" "xhci_pci" "ahci" "sd_mod" "sr_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
@@ -17,6 +21,7 @@
     { device = "/dev/disk/by-uuid/71d149d0-7601-406d-86e5-4bd5d44a78dd";
       fsType = "ext4";
     };
+  boot.kernel.sysctl = { "vm.swappiness" = 0;};
 
   fileSystems."/boot" =
     { device = "/dev/disk/by-uuid/2CE6-A677";
