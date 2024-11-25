@@ -1,4 +1,5 @@
 { config, pkgs, lib, inputs, ... }:
+
 {
 
   imports = 
@@ -6,7 +7,6 @@
       ../../pkg-config/git.nix
       ../../pkg-config/gh.nix
       ../../pkg-config/neovim.nix
-      ../../pkg-config/kitty.nix
       ../../pkg-config/eza.nix
       ../../pkg-config/tmux.nix
       ../../pkg-config/oh-my-posh.nix
@@ -38,7 +38,6 @@
     pkgs.age
     pkgs.argocd
     pkgs.bat
-    pkgs.bitwarden-desktop
     pkgs.bitwarden-cli
     pkgs.dig
     pkgs.coreutils-prefixed
@@ -67,12 +66,9 @@
     pkgs.pre-commit
     pkgs.pinentry-tty
     pkgs.ripgrep
-    pkgs.syncthing
     pkgs.sops
-    pkgs.trayscale
     pkgs.tree
     pkgs.tree-sitter
-    #pkgs.variety
     pkgs.virtualenv
     pkgs.wakelan
     pkgs.wget
@@ -110,7 +106,7 @@
   #
   home.sessionVariables = {
     #EDITOR = "vim";
-    DG_DATA_DIRS = "$XDG_DATA_DIRS:/usr/share:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share";
+    #DG_DATA_DIRS = "$XDG_DATA_DIRS:/usr/share:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share";
     YSU_HARDCORE = 1;
   };
 
@@ -119,14 +115,6 @@
   programs.bash.enable = true;
   #programs.neovim.enable = true;
   programs.neovim.defaultEditor = true;
+  #programs.starship.enable = true;
   #fonts.fontconfig.enable = true;
-
-  services.trayscale.enable = true;
-  services.trayscale.package = pkgs.trayscale;
-  services.trayscale.hideWindow = true;
-
-
-
-
-  
 }
