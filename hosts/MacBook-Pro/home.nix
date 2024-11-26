@@ -52,6 +52,7 @@
   home.file = {
     ".config/ohmyposh/zen.toml".source = ../../dotfiles/oh-my-posh.toml;
     ".config/variety/variety.conf".source = ../../dotfiles/variety.conf;
+    ".config/kitty/tab_bar.py".source = ../../dotfiles/tab_bar.py;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
