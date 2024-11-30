@@ -113,7 +113,11 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" "Ubuntu" "UbuntuMono" "FiraCode" "FiraMono" ]; })
+    #(nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" "Ubuntu" "Ubuntu" "FiraCode" "FiraMono" ]; })
+    #nerd-fonts.NerdFontsSymbolsOnly
+    #nerd-fonts.Ubuntu
+    #nerd-fonts.FiraCode
+    #nerd-fonts.FiraMono
     arandr
     auto-cpufreq
     direnv

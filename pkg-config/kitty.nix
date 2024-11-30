@@ -5,7 +5,7 @@
   programs.kitty.font.name = "FiraCode Nerd Font Mono";
   #programs.kitty.font.name = "Fantasque Sans Mono";
   #programs.kitty.font.name = "Ubuntu";
-  programs.kitty.font.package = (pkgs.nerdfonts.override { fonts = [ "FiraCode" "UbuntuMono" "NerdFontsSymbolsOnly" ]; });
+  #programs.kitty.font.package = nerd-fonts.FiraCode;
   programs.kitty.font.size = 17;
 
   programs.kitty.extraConfig = ''
