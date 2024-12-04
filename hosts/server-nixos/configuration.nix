@@ -20,6 +20,12 @@
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
+  #is static on dhcp
+  #networking.interfaces.eth0.ipv4.addresses = [ {
+  #  address = "10.10.10.13";
+  #  prefixLength = 24;
+  #} ];
+
   # Set your time zone.
   time.timeZone = "Europe/Lisbon";
 
