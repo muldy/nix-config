@@ -48,7 +48,7 @@
       nixosConfigurations.t14g4 = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
-	        #nixos-hardware.nixosModules.lenovo-thinkpad-t440p
+	        
           ./hosts/thinkpad-t14-gen4/hardware-configuration.nix
           inputs.home-manager.nixosModules.default
         ];
@@ -57,7 +57,8 @@
       nixosConfigurations.t440p= nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
-	  ./hosts/nix-config-t440p/hardware-configuration.nix
+          nixos-hardware.nixosModules.lenovo-thinkpad-t440p
+	        ./hosts/nix-config-t440p/hardware-configuration.nix
           inputs.home-manager.nixosModules.default
         ];
       };
@@ -65,7 +66,7 @@
       nixosConfigurations.x260= nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
-	  ./hosts/nix-config-x260/hardware-configuration.nix
+	        ./hosts/nix-config-x260/hardware-configuration.nix
           inputs.home-manager.nixosModules.default
         ];
       };
@@ -73,7 +74,7 @@
       nixosConfigurations.nixos= nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
-	  ./hosts/server-nixos/hardware-configuration.nix
+	        ./hosts/server-nixos/hardware-configuration.nix
           inputs.home-manager.nixosModules.default
         ];
       };
