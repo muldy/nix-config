@@ -48,7 +48,7 @@
       nixosConfigurations.t14g4 = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
-	  nixos-hardware.nixosModules.lenovo-thinkpad-t440p
+	        #nixos-hardware.nixosModules.lenovo-thinkpad-t440p
           ./hosts/thinkpad-t14-gen4/hardware-configuration.nix
           inputs.home-manager.nixosModules.default
         ];

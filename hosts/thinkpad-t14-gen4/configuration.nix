@@ -139,10 +139,12 @@
     keybase-gui
     kitty
     lm_sensors
+    nix-index
     nfs-utils
     openrgb-with-all-plugins
     openttd
     pavucontrol
+    pciutils
     python3
     sway
     thunderbird
