@@ -121,11 +121,12 @@
     arandr
     auto-cpufreq
     direnv
-    (pkgs.discord.override {
-      # remove any overrides that you don't want
-      withOpenASAR = true;
-      withVencord = true;
-    })
+    #(pkgs.discord.override {
+    #  # remove any overrides that you don't want
+    #  withOpenASAR = true;
+    #  withVencord = true;
+    #})
+    discord-canary
     fprintd
     gnome-software
     gnomeExtensions.battery-health-charging
@@ -154,7 +155,6 @@
     waybar
     wofi
     xclip
-    xwaylandvideobridge
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
