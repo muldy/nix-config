@@ -144,6 +144,7 @@
     nfs-utils
     openrgb-with-all-plugins
     openttd
+    obs-studio
     pavucontrol
     pciutils
     python3
