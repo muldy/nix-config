@@ -23,6 +23,9 @@
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "thunderbolt" "usb_storage" "usbhid" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
 
+  boot.supportedFilesystems = [ "nfs" ];
+  services.rpcbind.enable = true;
+
   boot.extraModulePackages = with config.boot.kernelPackages; [ v4l2loopback ];
   boot.kernelModules = [
     "kvm-amd"

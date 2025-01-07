@@ -10,6 +10,8 @@
       inputs.home-manager.nixosModules.default
     ];
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.auto-optimise-store = true;
+
 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -135,6 +137,7 @@
     gnomeExtensions.tailscale-status
     gnomeExtensions.tray-icons-reloaded
     gnomeExtensions.wallpaper-slideshow
+    go
     pinentry-gnome3
     keybase
     keybase-gui
