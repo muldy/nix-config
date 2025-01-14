@@ -39,6 +39,7 @@
     pkgs.kustomize
     pkgs.neofetch
     pkgs.nodejs_22
+    pkgs.opentofu
     pkgs.pinentry_mac
     pkgs.pre-commit
     pkgs.sops
