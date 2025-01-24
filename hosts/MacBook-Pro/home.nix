@@ -20,6 +20,7 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
     pkgs.awscli2
+    pkgs.ansible-lint
     pkgs.bat
     pkgs.coreutils-prefixed
     pkgs.dos2unix
