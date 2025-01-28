@@ -37,6 +37,7 @@
     # '')
     pkgs.age
     pkgs.argocd
+    pkgs.apacheHttpd
     pkgs.bat
     pkgs.bitwarden-desktop
     pkgs.bitwarden-cli
