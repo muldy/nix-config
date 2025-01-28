@@ -70,6 +70,7 @@
     pkgs.tree
     pkgs.tree-sitter
     pkgs.virtualenv
+    pkgs.unrar-free
     pkgs.wakelan
     pkgs.wget
     pkgs.yq

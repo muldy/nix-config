@@ -21,7 +21,11 @@
     { device = "/dev/disk/by-uuid/71d149d0-7601-406d-86e5-4bd5d44a78dd";
       fsType = "ext4";
     };
-  boot.kernel.sysctl = { "vm.swappiness" = 0;};
+  boot.kernel.sysctl = { 
+  	"vm.swappiness" = 0;
+	"net.ipv4.ip_unprivileged_port_start" = 69;
+	};
+  boot.supportedFilesystems = [ "nfs" ];
 
   fileSystems."/boot" =
     { device = "/dev/disk/by-uuid/2CE6-A677";

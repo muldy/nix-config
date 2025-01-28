@@ -82,10 +82,9 @@
   users.users.muldy = {
     isNormalUser = true;
     description = "muldy";
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "docker" ]; # Enable ‘sudo’ for the user.
     shell = pkgs.zsh;
     packages = with pkgs; [
-
     ];
   };
 
@@ -103,6 +102,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    nfs-utils
     python3
     unzip
     vim 
@@ -120,6 +120,20 @@
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
+
+  services.rpcbind.enable = true; # needed for NFS
+
+     # Define the NFS mount
+   fileSystems."/mnt/media" = {
+     device = "10.10.10.11:/mnt/GigaFuck/Media";
+     fsType = "nfs";
+     options = [ "rw" "_netdev" "vers=4.2" ];
+   };
+   fileSystems."/mnt/retro" = {
+     device = "10.10.10.11:/mnt/zfs1/Retro/";
+     fsType = "nfs";
+     options = [ "rw" "_netdev" "vers=4.2" ];
+   };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
@@ -151,5 +165,10 @@
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
   system.stateVersion = "24.05"; # Did you read the comment?
 
+  virtualisation.docker.enable = true;
+  virtualisation.docker.rootless = {
+	  enable = true;
+	  setSocketVariable = true;
+	};
 }
 
