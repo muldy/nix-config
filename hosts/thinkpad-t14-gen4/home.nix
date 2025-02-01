@@ -71,7 +71,6 @@
     pkgs.ripgrep
     pkgs.syncthing
     pkgs.sops
-    pkgs.trayscale
     pkgs.tree
     pkgs.tree-sitter
     #pkgs.variety
@@ -123,9 +122,9 @@
   programs.neovim.defaultEditor = true;
   #fonts.fontconfig.enable = true;
 
-  services.trayscale.enable = true;
-  services.trayscale.package = pkgs.trayscale;
-  services.trayscale.hideWindow = true;
+  #services.trayscale.enable = true;
+  #services.trayscale.package = pkgs.trayscale;
+  #services.trayscale.hideWindow = true;
 
 
 

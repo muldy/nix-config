@@ -91,7 +91,7 @@
   users.users.muldy = {
     isNormalUser = true;
     description = "muldy";
-    extraGroups = [ "networkmanager" "wheel" "input"];
+    extraGroups = [ "networkmanager" "wheel" "input" "docker"];
     shell = pkgs.zsh;
     packages = with pkgs; [
 
@@ -135,7 +135,7 @@
     gnomeExtensions.caffeine
     gnomeExtensions.custom-hot-corners-extended
     gnomeExtensions.tailscale-status
-    gnomeExtensions.tray-icons-reloaded
+    #gnomeExtensions.tray-icons-reloaded
     gnomeExtensions.wallpaper-slideshow
     go
     pinentry-gnome3
@@ -236,5 +236,12 @@
 
   environment.pathsToLink = [ "/share/zsh" ];
   fonts.fontDir.enable = true;
+
+
+  virtualisation.docker.enable = true;
+  virtualisation.docker.rootless = {
+	  enable = true;
+	  setSocketVariable = true;
+	};
 
 }
