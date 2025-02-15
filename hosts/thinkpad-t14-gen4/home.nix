@@ -27,6 +27,12 @@
   # release notes.
   home.stateVersion = "24.05"; # Please read the comment before changing.
 
+  programs.kodi = {
+    enable = true;
+    package = pkgs.kodiPackages.kodi;
+  };
+
+
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
@@ -35,12 +41,13 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
+    pkgs.kodiPackages.pvr-hts
     pkgs.age
     pkgs.argocd
     pkgs.apacheHttpd
     pkgs.bat
-    pkgs.bitwarden-desktop
-    pkgs.bitwarden-cli
+#    pkgs.bitwarden-desktop
+#    pkgs.bitwarden-cli
     pkgs.dig
     pkgs.coreutils-prefixed
     pkgs.file
@@ -66,6 +73,7 @@
     pkgs.inetutils
     pkgs.nodejs_22
     pkgs.openssl
+    pkgs.opentofu
     pkgs.pre-commit
     pkgs.pinentry-tty
     pkgs.ripgrep
