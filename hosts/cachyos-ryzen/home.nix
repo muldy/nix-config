@@ -58,6 +58,7 @@
     pkgs.git-credential-manager
     pkgs.gnumake
     pkgs.gnupg
+    pkgs.gnome-keyring
     pkgs.htop
     pkgs.jq
     pkgs.k9s
@@ -120,6 +121,7 @@
     #EDITOR = "vim";
     DG_DATA_DIRS = "$XDG_DATA_DIRS:/usr/share:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share";
     YSU_HARDCORE = 1;
+    GCM_CREDENTIAL_STORE = "secretservice";
   };
 
   # Let Home Manager install and manage itself.
