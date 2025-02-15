@@ -46,7 +46,7 @@
     pkgs.argocd
     pkgs.bat
     pkgs.bitwarden-desktop
-    pkgs.bitwarden-cli
+    #pkgs.bitwarden-cli
     pkgs.dig
     pkgs.coreutils-prefixed
     pkgs.file
@@ -55,6 +55,7 @@
     pkgs.gcc
     pkgs.git-doc
     pkgs.git-extras
+    pkgs.git-credential-manager
     pkgs.gnumake
     pkgs.gnupg
     pkgs.htop

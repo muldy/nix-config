@@ -8,10 +8,6 @@
   #programs.kitty.font.package = nerd-fonts.FiraCode;
   programs.kitty.font.size = 17;
 
-  programs.kitty.shell = "/usr/bin/zsh";
-
-
-
   programs.kitty.extraConfig = ''
     remember_window_size  no
     initial_window_width  1280
