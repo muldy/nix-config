@@ -1,2 +1,5 @@
 [user]
 	name = muldy
+	email = mrodferna@gmail.com
+[credential]
+	credentialStore = secretservice
