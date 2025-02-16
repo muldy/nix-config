@@ -7,6 +7,7 @@
 	programs.git.delta.enable = true;
 	programs.git.lfs.enable = true;
   programs.gh.gitCredentialHelper.enable = true;
+  programs.git.extraConfig.credential.helper = "gh";
   programs.gh.gitCredentialHelper.hosts = [
     "https://github.com"
     "https://gist.github.com"

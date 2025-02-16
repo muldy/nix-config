@@ -27,6 +27,9 @@
   # release notes.
   home.stateVersion = "24.05"; # Please read the comment before changing.
 
+
+
+
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.enableNixpkgsReleaseCheck = false;
@@ -90,6 +93,7 @@
     ".config/ohmyposh/zen.toml".source = ../../dotfiles/oh-my-posh.toml;
     ".config/variety/variety.conf".source = ../../dotfiles/variety.conf;
     ".config/kitty/tab_bar.py".source = ../../dotfiles/tab_bar.py;
+    ".gitconfig".source = ../../dotfiles/gitconfig;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
