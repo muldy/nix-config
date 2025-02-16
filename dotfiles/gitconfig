@@ -5,3 +5,4 @@
 	email = mrodferna@gmail.com
 [credential]
 	credentialStore = secretservice
+	helper = /usr/share/git/credential/libsecret/git-credential-libsecret
