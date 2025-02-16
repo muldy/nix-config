@@ -1,9 +1,6 @@
 { config, pkgs, lib, inputs, ... }:
 
-
-
 {
-
    imports = 
   [
       ../../pkg-config/git.nix
@@ -93,6 +90,7 @@
     ".config/ohmyposh/zen.toml".source = ../../dotfiles/oh-my-posh.toml;
     ".config/variety/variety.conf".source = ../../dotfiles/variety.conf;
     ".config/kitty/tab_bar.py".source = ../../dotfiles/tab_bar.py;
+    ".gitconfig".source = ../../dotfiles/gitconfig;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
@@ -119,7 +117,7 @@
   #
   home.sessionVariables = {
     #EDITOR = "vim";
-    DG_DATA_DIRS = "$XDG_DATA_DIRS:/usr/share:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share";
+    XDG_DATA_DIRS = "$HOME/.nix-profile/share:$XDG_DATA_DIRS";
     YSU_HARDCORE = 1;
     GCM_CREDENTIAL_STORE = "secretservice";
   };

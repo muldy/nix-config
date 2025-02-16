@@ -17,5 +17,5 @@ chsh /nix/store/lw3whxwhfj8qy0dyyqwxl12m7dp6xjh8-home-manager-path/bin/zsh
 home-manager switch -f ~/nix-config/hosts/cachyos-ryzen/home.nix
 
 ```
-ix-channel --add https://github.com/nix-community/nixGL/archive/main.tar.gz nixgl && nix-channel --update
+nix-channel --add https://github.com/nix-community/nixGL/archive/main.tar.gz nixgl && nix-channel --update
 nix-env -iA nixgl.auto.nixGLDefault   # or replace `nixGLDefault` with your desired wrapper
