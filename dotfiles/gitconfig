@@ -1,3 +1,5 @@
+[include]
+    path = ~/.config/git/config
 [user]
 	name = muldy
 	email = mrodferna@gmail.com
