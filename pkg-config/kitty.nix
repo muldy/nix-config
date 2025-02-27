@@ -9,6 +9,7 @@
   programs.kitty.font.size = 17;
 
   programs.kitty.extraConfig = ''
+    shell zsh
     remember_window_size  no
     initial_window_width  1280
     initial_window_height 720

@@ -68,6 +68,7 @@
     pkgs.kustomize-sops
     pkgs.neofetch
     pkgs.nettools
+    pkgs.neovide
     pkgs.nodejs_22
     pkgs.openssl
     pkgs.pre-commit
