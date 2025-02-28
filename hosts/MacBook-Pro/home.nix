@@ -5,6 +5,7 @@
   imports = 
   [
       ../../pkg-config/git-work.nix
+      ../../pkg-config/gh.nix
       ../../pkg-config/neovim.nix
       ../../pkg-config/kitty.nix
       ../../pkg-config/eza.nix
@@ -50,9 +51,10 @@
     pkgs.virtualenv
     pkgs.wget
     pkgs.yq
+    pkgs.zstd
     ];
   home.file = {
-    ".config/ohmyposh/zen.toml".source = ../../dotfiles/oh-my-posh.toml;
+    ".config/oh-my-posh/config.json".source = ../../dotfiles/oh-my-posh.json;
     ".config/variety/variety.conf".source = ../../dotfiles/variety.conf;
     ".config/kitty/tab_bar.py".source = ../../dotfiles/tab_bar.py;
 

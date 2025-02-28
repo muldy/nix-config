@@ -22,7 +22,7 @@
 
   users.users.muldy.home = "/Users/muldy";
   # Auto upgrade nix package and the daemon service.
-  services.nix-daemon.enable = true;
+  #services.nix-daemon.enable = true;
   # nix.package = pkgs.nix;
 
   # Necessary for using flakes on this system.
@@ -39,7 +39,7 @@
   # $ darwin-rebuild changelog
   system.stateVersion = 5;
 
-  nix.configureBuildUsers = true;
+  #nix.configureBuildUsers = true;
   
   # The platform the configuration will be used on.
   nixpkgs.hostPlatform = "aarch64-darwin";
