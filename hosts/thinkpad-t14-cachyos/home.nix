@@ -78,6 +78,7 @@
     pkgs.ripgrep
     pkgs.syncthing
     pkgs.sops
+    pkgs.xclip
     pkgs.trayscale
     pkgs.tree
     pkgs.tree-sitter
