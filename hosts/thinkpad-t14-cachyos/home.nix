@@ -124,6 +124,7 @@
     XDG_DATA_DIRS = "$HOME/.nix-profile/share:$XDG_DATA_DIRS";
     YSU_HARDCORE = 1;
     GCM_CREDENTIAL_STORE = "secretservice";
+    TERM = "xterm-256color";
   };
 
   # Let Home Manager install and manage itself.

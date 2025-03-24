@@ -35,3 +35,9 @@ sudo nix-env --delete-generations --profile /nix/var/nix/profiles/system 5d
 ```
 sudo nixos-rebuild switch  --flake /home/muldy/nix-config/#t14g4 --use-substitutes
 ```
+
+
+# home manager update:
+```
+home-manager switch -f ~/nix-config/hosts/thinkpad-t14-cachyos/home.nix -b backup 
+```
