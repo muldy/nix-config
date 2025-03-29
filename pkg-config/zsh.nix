@@ -42,6 +42,15 @@
   programs.zsh.initExtra = ''
 		export PATH=$PATH:$HOME/bin
     export EDITOR=vim 
+
+    source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
+    source $HOME/.p10k.zsh
+
+    if [[ -r "''${XDG_CACHE_HOME:-''$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then
+        source "''${XDG_CACHE_HOME:-''$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh"
+    fi
+
+  
 	'';
 
 

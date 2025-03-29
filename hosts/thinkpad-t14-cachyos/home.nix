@@ -9,7 +9,7 @@
       ../../pkg-config/kitty.nix
       ../../pkg-config/eza.nix
       ../../pkg-config/tmux.nix
-      ../../pkg-config/oh-my-posh.nix
+      #../../pkg-config/oh-my-posh.nix
       ../../pkg-config/zsh.nix
       
   ];
@@ -87,6 +87,7 @@
     pkgs.wakelan
     pkgs.wget
     pkgs.yq
+    pkgs.zsh-powerlevel10k
 
   ];
 
