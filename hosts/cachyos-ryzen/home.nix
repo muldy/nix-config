@@ -9,7 +9,7 @@
       ../../pkg-config/kitty.nix
       ../../pkg-config/eza.nix
       ../../pkg-config/tmux.nix
-      ../../pkg-config/oh-my-posh.nix
+      #../../pkg-config/oh-my-posh.nix
       ../../pkg-config/zsh.nix
       
   ];
@@ -26,6 +26,9 @@
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
   home.stateVersion = "24.05"; # Please read the comment before changing.
+
+
+  
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
@@ -77,6 +80,7 @@
     pkgs.ripgrep
     pkgs.syncthing
     pkgs.sops
+    pkgs.xclip
     pkgs.trayscale
     pkgs.tree
     pkgs.tree-sitter
@@ -85,6 +89,7 @@
     pkgs.wakelan
     pkgs.wget
     pkgs.yq
+    pkgs.zsh-powerlevel10k
 
   ];
 
@@ -93,6 +98,7 @@
     ".config/variety/variety.conf".source = ../../dotfiles/variety.conf;
     ".config/kitty/tab_bar.py".source = ../../dotfiles/tab_bar.py;
     ".gitconfig".source = ../../dotfiles/gitconfig;
+    ".p10k.zsh".source = ../../dotfiles/p10k.zsh;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''

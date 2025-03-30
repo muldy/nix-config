@@ -71,8 +71,10 @@
     pkgs.kustomize-sops
     pkgs.neofetch
     pkgs.nettools
+    pkgs.neovide
     pkgs.nodejs_22
     pkgs.openssl
+    pkgs.opentofu
     pkgs.pre-commit
     pkgs.pinentry-tty
     pkgs.ripgrep
@@ -96,6 +98,7 @@
     ".config/variety/variety.conf".source = ../../dotfiles/variety.conf;
     ".config/kitty/tab_bar.py".source = ../../dotfiles/tab_bar.py;
     ".gitconfig".source = ../../dotfiles/gitconfig;
+    ".p10k.zsh".source = ../../dotfiles/p10k.zsh;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
