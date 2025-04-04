@@ -66,6 +66,7 @@
     pkgs.pre-commit
     pkgs.pinentry-tty
     pkgs.ripgrep
+    pkgs.tftp-hpa
     pkgs.sops
     pkgs.tree
     pkgs.tree-sitter

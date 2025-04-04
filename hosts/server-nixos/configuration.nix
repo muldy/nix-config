@@ -11,6 +11,8 @@
     ];
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+
+
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -115,6 +117,16 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
+
+  programs.nix-ld.enable = true;
+
+  programs.nix-ld.libraries = with pkgs; [
+
+    # Add any missing dynamic libraries for unpackaged programs
+
+    # here, NOT in environment.systemPackages
+
+  ];
 
   # List services that you want to enable:
 
