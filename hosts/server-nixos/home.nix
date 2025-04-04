@@ -78,11 +78,12 @@
     pkgs.wakelan
     pkgs.wget
     pkgs.yq
+    pkgs.zsh-powerlevel10k
 
   ];
 
   home.file = {
-    ".config/ohmyposh/zen.toml".source = ../../dotfiles/oh-my-posh.toml;
+    #".config/ohmyposh/zen.toml".source = ../../dotfiles/oh-my-posh.toml;
     ".gitconfig".source = ../../dotfiles/gitconfig;
     ".p10k.zsh".source = ../../dotfiles/p10k.zsh;
 
