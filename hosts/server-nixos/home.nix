@@ -9,7 +9,7 @@
       ../../pkg-config/neovim.nix
       ../../pkg-config/eza.nix
       ../../pkg-config/tmux.nix
-      ../../pkg-config/oh-my-posh.nix
+
       ../../pkg-config/zsh.nix
       
   ];
@@ -29,6 +29,7 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
+  home.enableNixpkgsReleaseCheck = false;
   home.packages = [
     # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
 
@@ -38,7 +39,7 @@
     pkgs.age
     pkgs.argocd
     pkgs.bat
-    pkgs.bitwarden-cli
+    #pkgs.bitwarden-cli
     pkgs.dig
     pkgs.coreutils-prefixed
     pkgs.file
@@ -47,6 +48,7 @@
     pkgs.gcc
     pkgs.git-doc
     pkgs.git-extras
+    pkgs.git-credential-manager
     pkgs.gnumake
     pkgs.gnupg
     pkgs.htop
@@ -63,6 +65,7 @@
     pkgs.nettools
     pkgs.nodejs_22
     pkgs.openssl
+    pkgs.opentofu
     pkgs.pre-commit
     pkgs.pinentry-tty
     pkgs.ripgrep
@@ -80,6 +83,8 @@
 
   home.file = {
     ".config/ohmyposh/zen.toml".source = ../../dotfiles/oh-my-posh.toml;
+    ".gitconfig".source = ../../dotfiles/gitconfig;
+    ".p10k.zsh".source = ../../dotfiles/p10k.zsh;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
@@ -108,6 +113,8 @@
     #EDITOR = "vim";
     #DG_DATA_DIRS = "$XDG_DATA_DIRS:/usr/share:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share";
     YSU_HARDCORE = 1;
+    GCM_CREDENTIAL_STORE = "secretservice";
+    TERM = "xterm-256color";
   };
 
   # Let Home Manager install and manage itself.
