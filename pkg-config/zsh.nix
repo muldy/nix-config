@@ -63,7 +63,7 @@
   #mac:
   #aws-profile = "export AWS_PROFILE=$(sed -n \"s/\[profile \(.*\)\]/\1/gp\" ~/.aws/config | fzf)";
   #alias aws-profile='export AWS_PROFILE=$(sed -n "s/\[profile \(.*\)\]/\1/gp" ~/.aws/config | fzf)'
-  ssh = "kitty +kitten ssh";
+  #ssh = "kitty +kitten ssh";
   #kubernetes
   kns = "kubens";
   kctx = "kubectx";
