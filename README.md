@@ -53,7 +53,8 @@ curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix 
 ```
 echo "experimental-features = nix-command flakes" | sudo tee -a /etc/nix/nix.conf
 sudo systemctl restart nix-daemon
-home-manager switch -f /home/muldy/nix-config/hosts/thinkpad-t14-cachyos/home.nix -b backup
+nix run github:nix-community/home-manager -- init --switch -f ~/nix-config/hosts/thinkpad-t14-cachyos/home.nix 
 
+nix run github:nix-community/home-manager -- switch -f ~/nix-config/hosts/thinkpad-t14-cachyos/home.nix  -b bck
 ```
 
