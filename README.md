@@ -41,3 +41,19 @@ sudo nixos-rebuild switch  --flake /home/muldy/nix-config/#t14g4 --use-substitut
 ```
 home-manager switch -f ~/nix-config/hosts/thinkpad-t14-cachyos/home.nix -b backup 
 ```
+
+# Non nix OSes
+```
+curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
+
+```
+
+## enale flakes:
+
+```
+echo "experimental-features = nix-command flakes" | sudo tee -a /etc/nix/nix.conf
+sudo systemctl restart nix-daemon
+home-manager switch -f /home/muldy/nix-config/hosts/thinkpad-t14-cachyos/home.nix -b backup
+
+```
+
