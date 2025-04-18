@@ -78,7 +78,7 @@
     pkgs.pre-commit
     pkgs.pinentry-tty
     pkgs.ripgrep
-    pkgs.syncthing
+    #pkgs.syncthing
     pkgs.sops
     pkgs.xclip
     pkgs.trayscale
