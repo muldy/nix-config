@@ -1,5 +1,6 @@
 { config, lib, pkgs, home-manager,... }:
 {
+  system.activationScripts.extraActivationPath = "/usr/bin";
 
   environment.systemPackages = with pkgs; [
     vim
@@ -11,20 +12,24 @@
     enable = true;
     global.autoUpdate = false;
 
-    casks = [ 
-      "kitty" 
+    casks = [
       "discord"
       "syncthing"
+      "visual-studio-code"
     ];
+
+     #brewfile.enable = true;
   };
+
+
+    nix.enable = false;
 
   users.users.muldy.home = "/Users/muldy";
   nix.settings.experimental-features = "nix-command flakes";
   programs.zsh.enable = true;  # default shell on catalina
-  
+
   system.stateVersion = 5;
 
 
-  #nixpkgs.hostPlatform = "aarch64-darwin";
 
 }

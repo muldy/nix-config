@@ -78,6 +78,36 @@
           inputs.home-manager.nixosModules.default
         ];
       };
+     
+      #muldys.MacBook.Pro
+      darwinConfigurations."muldys-MacBook-Pro" = nix-darwin.lib.darwinSystem {
+        system = "x86_64-darwin";
+        modules = [
+          ./hosts/muldys-MacBook-Pro/darwin-configuration.nix
+  
+          # This hooks in Home Manager
+          home-manager.darwinModules.home-manager # Define your Home Manager user config inline or from file
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.muldy = import ./hosts/muldys-MacBook-Pro/home.nix;
+          }
+          nix-homebrew.darwinModules.nix-homebrew
+          {
+            nix-homebrew = {
+            enable = true;
+            user = "muldy";
+            
+            taps = {
+              "homebrew/homebrew-core" = homebrew-core;
+              "homebrew/homebrew-cask" = homebrew-cask;
+              "homebrew/homebrew-bundle" = homebrew-bundle;
+            };
+            mutableTaps = false;
+            };
+          }
+        ];
+      };
 
       #MacBook.Pro
       darwinConfigurations.MacBook-Pro = nix-darwin.lib.darwinSystem {

@@ -4,21 +4,18 @@
   home.stateVersion = "23.11";
   imports = 
   [
-      ../../pkg-config/git-work.nix
+      ../../darwin-cfg/spotlight.nix
+
+      ../../pkg-config/git.nix
       ../../pkg-config/gh.nix
       ../../pkg-config/neovim.nix
-      ../../pkg-config/kitty.nix
       ../../pkg-config/eza.nix
       ../../pkg-config/tmux.nix
-      #../../pkg-config/oh-my-posh.nix
       ../../pkg-config/zsh.nix
-#      ../../pkg-config/syncthing.nix
+
   ];
   home.packages = [
 
-    pkgs.awscli2
-    pkgs.ansible-lint
-    pkgs.bat
     pkgs.coreutils-prefixed
     pkgs.dos2unix
     pkgs.fh
@@ -43,17 +40,18 @@
     pkgs.sops
     pkgs.tree
     pkgs.tree-sitter
-    #pkgs.variety
+
     pkgs.virtualenv
     pkgs.wget
     pkgs.yq
     pkgs.zstd
     pkgs.zsh-powerlevel10k
+
     ];
+
+  programs.zsh.enable = true;
+
   home.file = {
-    #".config/oh-my-posh/config.json".source = ../../dotfiles/oh-my-posh.json;
-    ".config/variety/variety.conf".source = ../../dotfiles/variety.conf;
-    ".config/kitty/tab_bar.py".source = ../../dotfiles/tab_bar.py;
     #".gitconfig".source = ../../dotfiles/gitconfig;
     ".p10k.zsh".source = ../../dotfiles/p10k.zsh;
 
@@ -65,12 +63,11 @@
   };
   home.sessionVariables = {
     #EDITOR = "vim";
-
-    TERM = "xterm-256color";
+    #TERM = "xterm-256color";
   };
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
   programs.bash.enable = true;
   programs.neovim.defaultEditor = true;
-  
 }
+
