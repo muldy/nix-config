@@ -7,6 +7,11 @@
     ripgrep
   ];
 
+  fonts.packages = [
+           pkgs.nerd-fonts.droid-sans-mono
+           pkgs.nerd-fonts.fira-code
+         ];
+
   homebrew = {
     enable = true;
     global.autoUpdate = false;

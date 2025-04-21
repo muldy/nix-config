@@ -10,12 +10,9 @@
       ../../pkg-config/kitty.nix
       ../../pkg-config/eza.nix
       ../../pkg-config/tmux.nix
-      #../../pkg-config/oh-my-posh.nix
       ../../pkg-config/zsh.nix
-#      ../../pkg-config/syncthing.nix
   ];
   home.packages = [
-
     pkgs.awscli2
     pkgs.ansible-lint
     pkgs.bat
@@ -40,21 +37,20 @@
     pkgs.opentofu
     pkgs.pinentry_mac
     pkgs.pre-commit
+    pkgs.python311 # poetry
     pkgs.sops
     pkgs.tree
     pkgs.tree-sitter
-    #pkgs.variety
     pkgs.virtualenv
     pkgs.wget
     pkgs.yq
     pkgs.zstd
     pkgs.zsh-powerlevel10k
     ];
+ 
+  
   home.file = {
-    #".config/oh-my-posh/config.json".source = ../../dotfiles/oh-my-posh.json;
-    ".config/variety/variety.conf".source = ../../dotfiles/variety.conf;
     ".config/kitty/tab_bar.py".source = ../../dotfiles/tab_bar.py;
-    #".gitconfig".source = ../../dotfiles/gitconfig;
     ".p10k.zsh".source = ../../dotfiles/p10k.zsh;
 
     # # You can also set the file content immediately.
@@ -65,7 +61,6 @@
   };
   home.sessionVariables = {
     #EDITOR = "vim";
-
     TERM = "xterm-256color";
   };
   # Let Home Manager install and manage itself.
