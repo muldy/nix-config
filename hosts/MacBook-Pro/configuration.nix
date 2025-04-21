@@ -17,7 +17,6 @@
     global.autoUpdate = false;
 
     casks = [ 
-      "kitty" 
       "discord"
       "syncthing"
     ];

@@ -1,5 +1,12 @@
 { config, lib, pkgs, home-manager,... }:
+
 {
+  
+  imports = [
+    ../../darwin-cfg/dock.nix
+    ../../darwin-cfg/spotlight.nix
+  ];
+
   system.activationScripts.extraActivationPath = "/usr/bin";
 
   environment.systemPackages = with pkgs; [

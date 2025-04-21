@@ -1,10 +1,14 @@
 { config, pkgs, lib, ... }:
 
 {
-  home.activation.restrictSpotlight = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-    echo "Restricting Spotlight to only show apps and settings..."
+  system.activationScripts.configureSpotlight.text = ''
+    echo "Configuring Spotlight: Disabling all categories except Applications and System Preferences"
 
-    defaults write com.apple.Spotlight orderedItems -array \
+    # Disable indexing entirely first to ensure clean slate
+    sudo mdutil -i off / || true
+
+    # Overwrite Spotlight search categories
+    defaults write com.apple.spotlight orderedItems -array \
       '{"enabled" = 1; "name" = "APPLICATIONS";}' \
       '{"enabled" = 1; "name" = "SYSTEM_PREFS";}' \
       '{"enabled" = 0; "name" = "DOCUMENTS";}' \
@@ -20,11 +24,16 @@
       '{"enabled" = 0; "name" = "MOVIES";}' \
       '{"enabled" = 0; "name" = "PRESENTATIONS";}' \
       '{"enabled" = 0; "name" = "SPREADSHEETS";}' \
-      '{"enabled" = 0; "name" = "SOURCE";}'
+      '{"enabled" = 0; "name" = "SOURCE";}' \
+      '{"enabled" = 0; "name" = "MENU_DEFINITION";}' \
+      '{"enabled" = 0; "name" = "MENU_OTHER";}' \
+      '{"enabled" = 0; "name" = "MENU_CONVERSION";}' \
+      '{"enabled" = 0; "name" = "MENU_EXPRESSION";}' \
+      '{"enabled" = 0; "name" = "MENU_WEBSEARCH";}' \
+      '{"enabled" = 0; "name" = "MENU_SPOTLIGHT_SUGGESTIONS";}'
 
-    killall mds > /dev/null 2>&1 || true
-    sudo mdutil -E / > /dev/null 2>&1 || true
-    sudo mdutil -i on / > /dev/null 2>&1 || true
+    echo "Spotlight configuration applied."
   '';
 }
+
 

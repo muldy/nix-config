@@ -4,11 +4,10 @@
   home.stateVersion = "23.11";
   imports = 
   [
-      ../../darwin-cfg/spotlight.nix
-
       ../../pkg-config/git.nix
       ../../pkg-config/gh.nix
       ../../pkg-config/neovim.nix
+      ../../pkg-config/kitty.nix
       ../../pkg-config/eza.nix
       ../../pkg-config/tmux.nix
       ../../pkg-config/zsh.nix
@@ -52,7 +51,8 @@
   programs.zsh.enable = true;
 
   home.file = {
-    #".gitconfig".source = ../../dotfiles/gitconfig;
+    ".config/kitty/tab_bar.py".source = ../../dotfiles/tab_bar.py;
+    ".gitconfig".source = ../../dotfiles/gitconfig;
     ".p10k.zsh".source = ../../dotfiles/p10k.zsh;
 
     # # You can also set the file content immediately.
@@ -63,7 +63,7 @@
   };
   home.sessionVariables = {
     #EDITOR = "vim";
-    #TERM = "xterm-256color";
+    TERM = "xterm-256color";
   };
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
