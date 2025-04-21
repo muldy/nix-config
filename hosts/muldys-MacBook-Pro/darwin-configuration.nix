@@ -11,6 +11,11 @@
   homebrew = {
     enable = true;
     global.autoUpdate = false;
+    onActivation = {
+       autoUpdate = true;
+       upgrade = true;
+       cleanup = "zap";
+     };
 
     casks = [
       "discord"

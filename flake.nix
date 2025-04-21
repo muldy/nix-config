@@ -97,6 +97,7 @@
             nix-homebrew = {
             enable = true;
             user = "muldy";
+	    autoMigrate = true;
             
             taps = {
               "homebrew/homebrew-core" = homebrew-core;
