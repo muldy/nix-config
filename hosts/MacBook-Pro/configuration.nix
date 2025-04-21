@@ -5,9 +5,12 @@
     vim
     direnv
     ripgrep
-    #(nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" "Ubuntu" "UbuntuMono" "FiraCode" "FiraMono" ]; })
-
   ];
+
+  fonts.packages = [
+           pkgs.nerd-fonts.droid-sans-mono
+           pkgs.nerd-fonts.fira-code
+         ];
 
   homebrew = {
     enable = true;
