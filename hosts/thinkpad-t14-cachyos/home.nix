@@ -9,7 +9,6 @@
       ../../pkg-config/kitty.nix
       ../../pkg-config/eza.nix
       ../../pkg-config/tmux.nix
-      #../../pkg-config/oh-my-posh.nix
       ../../pkg-config/zsh.nix
       
   ];
