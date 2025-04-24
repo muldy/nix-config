@@ -33,6 +33,12 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.enableNixpkgsReleaseCheck = false;
+
+  fonts.packages = [
+           pkgs.nerd-fonts.droid-sans-mono
+           pkgs.nerd-fonts.fira-code
+         ];
+
   home.packages = [
     # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
 
