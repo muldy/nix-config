@@ -71,7 +71,7 @@
         ];
       };
       #server-nixos
-      nixosConfigurations.nixos= nixpkgs.lib.nixosSystem {
+      nixosConfigurations.nixos-server= nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
 	        ./hosts/server-nixos/hardware-configuration.nix
